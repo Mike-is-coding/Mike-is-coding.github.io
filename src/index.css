@@ -9,43 +9,75 @@ body {
   font-weight: 400;
   line-height: 1.4;
   color: var(--text-color);
-  overflow-x: clip;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.Background {
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #649568;
+}
+
+.fab {
+  font-family: "Font Awesome 5 Brands";
+}
+
+.fa,
+.fab,
+.fal,
+.far,
+.fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.background {
   background: gray;
   width: 100vw;
-  height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 0;
 }
 
 :root {
   --soft-red: #6f0000;
-  --blue1: #6495ED;
-  --blue2: #B0C4DE;
-  --blue3: #ADD8E6;
+  --blue1: #6495ed;
+  --blue2: #b0c4de;
+  --blue3: #add8e6;
   --black1: #3a3d40;
   --black2: #181719;
   --text-color: #f0f0f0;
 }
 
 #navbar {
-  background: var(--blue2);
+  background: #181719;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 50px;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
@@ -56,14 +88,6 @@ code {
   margin-right: 0.5rem;
 }
 
-ul {
-  list-style: none;
-}
-
-#nav-bar-div > li {
-  color: var(--black2);
-}
-
 .nav-list a {
   display: block;
   font-size: 1.5rem;
@@ -72,23 +96,19 @@ ul {
   text-decoration: underline;
 }
 
-a {
-  text-decoration: none;
-  color: var(--black1);
-}
-
 #welcome-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  overflow-x: clip;
   background: radial-gradient(var(--black1) 0%, var(--black2) 100%);
 }
 
 .welcome-text {
-  color: var(--text-color);
+  color: #649568;
   text-align: center;
   font-size: 5rem;
   font-weight: 700;
@@ -99,71 +119,15 @@ a {
   font-weight: 200;
   font-style: italic;
   margin-top: 0px;
-  color: var(--blue3);
+  color: #0e6b0e;
 }
 
-#projects {
-  background: var(--blue2);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  text-align: center;
-}
-
-#projects > h2 {
-  color: var(--black1);
-  font-size: 2rem;
-  border-bottom: 0.3rem solid var(--black1);
-  margin: 50px 0;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  margin-bottom: 6rem;
-}
-
-.project-image {
-  height: calc(100% - 6.8rem);
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-img {
-  display: block;
-  width: 100%;
-}
-
-.project {
-  background: var(--black1);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 2px;
-}
-
-.project-tile {
-  font-size: 2rem;
-  padding: 2rem 0.5rem;
-}
-
-.code {
-  color: var(--black1);
-  transition: color 0.3s ease-out;
-}
-
-.project:hover .code {
-  color: #ff7f50;
-}
-
-p {
-  color: var(--text-color);
-  text-align: center;
+.projects-section {
+  background: #2b5329;
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .contact-section {
@@ -172,9 +136,10 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
-  height: 80vh;
+  width: 100vw;
+  height: 500px;
   background: var(--black1);
+  margin-bottom: 0;
 }
 
 .contact-links {
@@ -197,20 +162,6 @@ p {
   padding: 1rem 2rem;
   border-radius: 2px;
   color: var(--text-color);
-}
-
-.fab {
-  font-family: "Font Awesome 5 Brands";
-}
-
-.fa, .fab, .fal, .far, .fas {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
 }
 
 .contact-details:hover {
