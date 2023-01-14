@@ -28,7 +28,7 @@ function App() {
       <section id="welcome-section">
         <h1 className="welcome-text">Hey I'm Miguel</h1>
         <p>Front-End Developer</p>
-        <p className="scroll-cont">{'--'}<span className="scroll-text">Scroll...</span>{'--'}</p>
+        <p className="scroll-cont"><span className="scroll-text">▼</span></p>
       </section>
 
       {/* || Projects Section */}

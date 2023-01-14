@@ -23,6 +23,13 @@ $black2: #1a1d10;
   animation: flickerAnimation 0.05s infinite;
 }
 
+@mixin flicker-slow {
+  -webkit-animation: flickerAnimation 3s infinite;
+  -moz-animation: flickerAnimation 3s infinite;
+  -o-animation: flickerAnimation 3s infinite;
+  animation: flickerAnimation 3s infinite;
+}
+
 @mixin flicker-static {
   -webkit-animation: flicker-static 2s infinite;
   -moz-animation: flicker-static 2s infinite;
@@ -35,14 +42,8 @@ $black2: #1a1d10;
   0% {
     opacity: 1;
   }
-  25% {
-    opacity: 0.5;
-  }
   50% {
     opacity: 0;
-  }
-  75% {
-    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -52,14 +53,8 @@ $black2: #1a1d10;
   0% {
     opacity: 1;
   }
-  25% {
-    opacity: 0.5;
-  }
   50% {
     opacity: 0;
-  }
-  75% {
-    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -69,14 +64,8 @@ $black2: #1a1d10;
   0% {
     opacity: 1;
   }
-  25% {
-    opacity: 0.5;
-  }
   50% {
     opacity: 0;
-  }
-  75% {
-    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -86,14 +75,8 @@ $black2: #1a1d10;
   0% {
     opacity: 1;
   }
-  25% {
-    opacity: 0.5;
-  }
   50% {
     opacity: 0;
-  }
-  75% {
-    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -192,7 +175,7 @@ a {
 
 .background-static {
   width: 100vw;
-  height: 20px;
+  height: 15px;
   background: $flicker-green;
   position: absolute;
   top: 0;
@@ -274,7 +257,8 @@ a {
 }
 
 .scroll-text {
-  font-size: 15px;
+  font-size: 20px;
+  @include flicker-slow();
 }
 
 .projects-section {
