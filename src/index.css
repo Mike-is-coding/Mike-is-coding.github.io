@@ -40,6 +40,22 @@
     opacity: 1;
   }
 }
+@keyframes flicker-static {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 1000px;
+  }
+}
+@-webkit-keyframes flicker-static {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 1000px;
+  }
+}
 /* Default page css */
 body {
   font-family: "Poppins", sans-serif;
@@ -92,7 +108,18 @@ a {
   background: radial-gradient(circle, #181719 0%, #181719 50%, #2b5329 100%);
   -webkit-animation: flickerAnimation 0.05s infinite;
   animation: flickerAnimation 0.05s infinite;
-  z-index: 1;
+  z-index: 0;
+}
+
+.background-static {
+  width: 100vw;
+  height: 20px;
+  background: radial-gradient(circle, #181719 0%, #181719 50%, #2b5329 100%);
+  position: absolute;
+  top: 0;
+  -webkit-animation: flicker-static 2s infinite;
+  animation: flicker-static 2s infinite;
+  z-index: 2;
 }
 
 .container {

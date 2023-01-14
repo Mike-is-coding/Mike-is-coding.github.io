@@ -5,6 +5,7 @@ function App() {
   return (
     <>
     <div className="background"></div>
+    <div className="background-static"></div>
     <div className="container">
       {/* || Navbar */}
       <div id="nav-bar-div">

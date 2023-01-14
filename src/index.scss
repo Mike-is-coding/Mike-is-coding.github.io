@@ -2,6 +2,7 @@
 $dark-hacker: #0e6b0e;
 $dark-dark-hacker: #2b5329;
 $flicker-green: radial-gradient(circle, #181719 0%, #181719 50%, #2b5329 100%);
+$flicker-static-green: g;
 $hacker: #149414;
 $light-hacker: #649568;
 $black: #181719;
@@ -20,6 +21,13 @@ $black2: #1a1d10;
   -moz-animation: flickerAnimation 0.05s infinite;
   -o-animation: flickerAnimation 0.05s infinite;
   animation: flickerAnimation 0.05s infinite;
+}
+
+@mixin flicker-static {
+  -webkit-animation: flicker-static 2s infinite;
+  -moz-animation: flicker-static 2s infinite;
+  -o-animation: flicker-static 2s infinite;
+  animation: flicker-static 2s infinite;
 }
 
 /* Animation keyframes */
@@ -92,6 +100,38 @@ $black2: #1a1d10;
   }
 }
 
+@keyframes flicker-static {
+  0% {
+    top: 0;
+  } 100% {
+    top: 1000px;
+  }
+}
+
+@-o-keyframes flicker-static {
+  0% {
+    top: 0;
+  } 100% {
+    top: 1000px;
+  }
+}
+
+@-moz-keyframes flicker-static {
+  0% {
+    top: 0;
+  } 100% {
+    top: 1000px;
+  }
+}
+
+@-webkit-keyframes flicker-static {
+  0% {
+    top: 0;
+  } 100% {
+    top: 1000px;
+  }
+}
+
 /* Default page css */
 body {
   font-family: "Poppins", sans-serif;
@@ -147,7 +187,17 @@ a {
   width: 100vw;
   background: $flicker-green;
   @include flicker();
-  z-index: 1;
+  z-index: 0;
+}
+
+.background-static {
+  width: 100vw;
+  height: 20px;
+  background: $flicker-green;
+  position: absolute;
+  top: 0;
+  @include flicker-static();
+  z-index: 2;
 }
 
 .container {
