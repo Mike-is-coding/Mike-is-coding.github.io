@@ -1,10 +1,11 @@
-// Color variables
+/* Color variables */
 $dark-hacker: #0e6b0e;
 $dark-dark-hacker: #2b5329;
 $hacker: #149414;
 $light-hacker: #649568;
-
 $black: #181719;
+$trans-black: rgb(24, 23, 25, 0.8);
+$black2: #1a1d10;
 
 @media only screen and (min-width: 600px) {
   body {
@@ -12,7 +13,53 @@ $black: #181719;
   }
 }
 
-// Default page css
+/* Animation keyframes */
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Default page css */
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
@@ -25,6 +72,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  background: $black;
 }
 
 code {
@@ -59,31 +107,34 @@ a {
   line-height: 1;
 }
 
-// Specific css
+/* Specific css */
 
 .background {
-  background: gray;
+  height: 100vh;
+  width: 100vw;
+  background: $dark-dark-hacker;
+  -webkit-animation: flickerAnimation 0.01s infinite;
+  -moz-animation: flickerAnimation 0.01s infinite;
+  -o-animation: flickerAnimation 0.01s infinite;
+  animation: flickerAnimation 0.01s infinite;
+  z-index: 1;
+}
+
+.container {
   width: 100vw;
   height: fit-content;
   margin: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  position: absolute;
+  top: 0;
   margin-bottom: 0;
-}
-
-:root {
-  --soft-red: #6f0000;
-  --blue1: #6495ed;
-  --blue2: #b0c4de;
-  --blue3: #add8e6;
-  --black1: #3a3d40;
-  --black2: #181719;
-  --text-color: #f0f0f0;
+  z-index: 5;
 }
 
 #navbar {
-  background: $black;
+  background: $black2;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -116,12 +167,13 @@ a {
   align-items: center;
   width: 100vw;
   height: 100vh;
+  position: relative;
   overflow-x: clip;
-  background: radial-gradient(var(--black1) 0%, var(--black2) 100%);
+  background: $trans-black;
 }
 
 .welcome-text {
-  color: $light-hacker;
+  color: $hacker;
   text-align: center;
   font-size: 5rem;
   font-weight: 700;
@@ -135,10 +187,36 @@ a {
   color: $dark-hacker;
 }
 
+.scroll-cont {
+  position: absolute;
+  bottom: 0px;
+  font-size: 50px;
+}
+
+.scroll-text {
+  font-size: 15px;
+}
+
 .projects-section {
-    background: $dark-dark-hacker;
-    width: 100vw;
-    height: fit-content;
+  background: $dark-dark-hacker;
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.projects-section-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project {
+  width: 49%;
+  height: 400px;
+  background: $black;
+  border: 1px solid $hacker;
+  flex: 1;
 }
 
 .contact-section {
@@ -149,8 +227,8 @@ a {
   text-align: center;
   width: 100vw;
   height: 500px;
-  background: var(--black1);
-  margin-bottom: 0;
+  background: $black;
+  margin-bottom: -10px;
 }
 
 .contact-links {

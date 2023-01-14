@@ -3,7 +3,10 @@ import "./index.css";
 
 function App() {
   return (
-    <div className="background">
+    <>
+    <div className="background"></div>
+    <div className="container">
+      {/* || Navbar */}
       <div id="nav-bar-div">
         <nav id="navbar">
           <ul className="nav-list">
@@ -19,15 +22,27 @@ function App() {
           </ul>
         </nav>
       </div>
+
+      {/* || Welcome Section */}
       <section id="welcome-section">
         <h1 className="welcome-text">Hey I'm Miguel</h1>
         <p>Front-End Developer</p>
+        <p className="scroll-cont">{'--'}<span className="scroll-text">Scroll...</span>{'--'}</p>
       </section>
+
+      {/* || Projects Section */}
       <section className="projects-section">
         <div className="projects-section-container">
-          
+          <div className="project"></div>
+          <div className="project"></div>
+        </div>
+        <div className="projects-section-container">
+          <div className="project"></div>
+          <div className="project"></div>
         </div>
       </section>
+
+      {/* || Contact Section */}
       <section id="contact-me" className="contact-section">
         <div className="contact-section-header">
           <h2> Lets Work Together...</h2>
@@ -62,6 +77,7 @@ function App() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 
