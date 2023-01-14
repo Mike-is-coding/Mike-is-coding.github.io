@@ -45,7 +45,7 @@ function App() {
       {/* || Contact Section */}
       <section id="contact-me" className="contact-section">
         <div className="contact-section-header">
-          <h2> Lets Work Together...</h2>
+          <h2 className="contact-title"> Lets Work Together...</h2>
         </div>
         <div className="contact-link">
           <a

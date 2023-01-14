@@ -14,6 +14,14 @@ $black2: #1a1d10;
   }
 }
 
+/* Mixins */
+@mixin flicker{
+  -webkit-animation: flickerAnimation 0.05s infinite;
+  -moz-animation: flickerAnimation 0.05s infinite;
+  -o-animation: flickerAnimation 0.05s infinite;
+  animation: flickerAnimation 0.05s infinite;
+}
+
 /* Animation keyframes */
 @keyframes flickerAnimation {
   0% {
@@ -138,10 +146,7 @@ a {
   height: 100vh;
   width: 100vw;
   background: $flicker-green;
-  -webkit-animation: flickerAnimation 0.05s infinite;
-  -moz-animation: flickerAnimation 0.05s infinite;
-  -o-animation: flickerAnimation 0.05s infinite;
-  animation: flickerAnimation 0.05s infinite;
+  @include flicker();
   z-index: 1;
 }
 
@@ -256,6 +261,10 @@ a {
   margin-bottom: -10px;
 }
 
+.contact-title {
+  color: green;
+}
+
 .contact-links {
   display: flex;
   justify-content: center;
@@ -275,7 +284,6 @@ a {
   display: inline-block;
   padding: 1rem 2rem;
   border-radius: 2px;
-  color: var(--text-color);
 }
 
 .contact-details:hover {
@@ -283,5 +291,5 @@ a {
 }
 
 .contact-link > a {
-  color: white;
+  color: $hacker;
 }
