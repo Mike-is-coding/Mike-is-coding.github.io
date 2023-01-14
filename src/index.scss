@@ -1,10 +1,11 @@
 /* Color variables */
 $dark-hacker: #0e6b0e;
 $dark-dark-hacker: #2b5329;
+$flicker-green: radial-gradient(circle, #181719 0%, #181719 50%, #2b5329 100%);
 $hacker: #149414;
 $light-hacker: #649568;
 $black: #181719;
-$trans-black: rgb(24, 23, 25, 0.8);
+$trans-black: rgb(24, 23, 25, 0.7);
 $black2: #1a1d10;
 
 @media only screen and (min-width: 600px) {
@@ -18,8 +19,14 @@ $black2: #1a1d10;
   0% {
     opacity: 1;
   }
+  25% {
+    opacity: 0.5;
+  }
   50% {
     opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -29,8 +36,14 @@ $black2: #1a1d10;
   0% {
     opacity: 1;
   }
+  25% {
+    opacity: 0.5;
+  }
   50% {
     opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -40,8 +53,14 @@ $black2: #1a1d10;
   0% {
     opacity: 1;
   }
+  25% {
+    opacity: 0.5;
+  }
   50% {
     opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -51,8 +70,14 @@ $black2: #1a1d10;
   0% {
     opacity: 1;
   }
+  25% {
+    opacity: 0.5;
+  }
   50% {
     opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -112,11 +137,11 @@ a {
 .background {
   height: 100vh;
   width: 100vw;
-  background: $dark-dark-hacker;
-  -webkit-animation: flickerAnimation 0.01s infinite;
-  -moz-animation: flickerAnimation 0.01s infinite;
-  -o-animation: flickerAnimation 0.01s infinite;
-  animation: flickerAnimation 0.01s infinite;
+  background: $flicker-green;
+  -webkit-animation: flickerAnimation 0.05s infinite;
+  -moz-animation: flickerAnimation 0.05s infinite;
+  -o-animation: flickerAnimation 0.05s infinite;
+  animation: flickerAnimation 0.05s infinite;
   z-index: 1;
 }
 
