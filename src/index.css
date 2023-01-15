@@ -58,6 +58,27 @@ body {
   background: #181719;
 }
 
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #149414 #181719;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #181719;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #149414;
+  border-radius: 20px;
+  border: 3px solid #181719;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
