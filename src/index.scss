@@ -1,13 +1,13 @@
 /* Variables */
 $dark-hacker: #0e6b0e;
 $dark-dark-hacker: #2b5329;
-$flicker-green: radial-gradient(circle, $black 0%, $black 50%, #2b5329 100%);
+$flicker-green: radial-gradient(circle, #000000 0%, #000000 50%, #2b5329 100%);
 $flicker-static-green: g;
 $hacker: #149414;
 $light-hacker: #649568;
 $black: #000000;
-$trans-black: rgb(24, 23, 25, 0.99);
-$black2: #0F0F0F;
+$trans-black: rgb(0, 0, 0, 0.7);
+$trans-gradient-black: linear-gradient(0deg, #000000 0%, #000000 80%, rgb(0, 0, 0, 0.7) 100%);
 
 @media only screen and (min-width: 600px) {
   body {
@@ -251,9 +251,9 @@ a {
 /* Specific css */
 
 .background {
-  height: 2000px;
+  height: fit-content;
   width: 100vw;
-  background: $black2;
+  background: $flicker-green;
   @include flicker();
   z-index: 0;
 }
@@ -292,7 +292,7 @@ a {
 }
 
 #navbar {
-  background: $black2;
+  background: $black;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -327,7 +327,7 @@ a {
   height: 100vh;
   position: relative;
   overflow-x: clip;
-  background: $black;
+  background: $trans-black;
 }
 
 .welcome-container {
@@ -392,6 +392,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 }
 
 .about-me-text {
@@ -404,40 +405,51 @@ a {
 hr.dashed {
   border: 0;
   border-top: 2px dashed $dark-hacker;
-
 }
 
 .projects-section {
-  background: $dark-dark-hacker;
-  width: 500px;
+  background: $trans-gradient-black;
+  width: 100vw;
   height: fit-content;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
+  background: $black;
+  position: relative;
+  top: 0;
+  z-index: 5;
 }
 
 .projects-section-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  // position: relative;
+  // left: 20vw;
+  width: 60vw;
+  height: 500px;
+  background: $dark-dark-hacker;
 }
 
 .project {
-  width: 20px;
-  height: 40px;
-  background: $black;
+  width: 100px;
+  height: 300px;
+  background: $dark-dark-hacker;
   border: 1px solid $hacker;
   flex: 1;
 }
 
 .contact-section {
   display: flex;
+  position: relative;
+  top: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 100vw;
   height: 500px;
-  background: $trans-black;
+  background: $black;
   margin-bottom: -10px;
 }
 

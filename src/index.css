@@ -1,4 +1,4 @@
-/* Color variables */
+/* Variables */
 @media only screen and (min-width: 600px) {
   body {
     min-width: 600;
@@ -75,13 +75,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  background: rgb(0, 0, 0);
+  background: #000000;
 }
 
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #149414 rgb(0, 0, 0);
+  scrollbar-color: #149414 #000000;
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -90,13 +90,13 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: rgb(0, 0, 0);
+  background: #000000;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: #149414;
   border-radius: 20px;
-  border: 3px solid rgb(0, 0, 0);
+  border: 3px solid #000000;
 }
 
 code {
@@ -141,9 +141,11 @@ a {
 
 /* Specific css */
 .background {
-  height: 1500px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100vw;
-  background: radial-gradient(circle, #181719 0%, #181719 50%, #2b5329 100%);
+  background: radial-gradient(circle, #000000 0%, #000000 50%, #2b5329 100%);
   -webkit-animation: flickerAnimation 0.05s infinite;
   animation: flickerAnimation 0.05s infinite;
   z-index: 0;
@@ -152,7 +154,7 @@ a {
 .background-static {
   width: 100vw;
   height: 15px;
-  background: radial-gradient(circle, #181719 0%, #181719 50%, #2b5329 100%);
+  background: radial-gradient(circle, #000000 0%, #000000 50%, #2b5329 100%);
   position: absolute;
   top: 0;
   -webkit-animation: flicker-static 4s infinite;
@@ -163,7 +165,7 @@ a {
 .background-static2 {
   width: 100vw;
   height: 15px;
-  background: radial-gradient(circle, #181719 0%, #181719 50%, #2b5329 100%);
+  background: radial-gradient(circle, #000000 0%, #000000 50%, #2b5329 100%);
   position: absolute;
   top: 0;
   -webkit-animation: flicker-static 4s infinite;
@@ -193,7 +195,7 @@ a {
 }
 
 #navbar {
-  background: #1a1d10;
+  background: #000000;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -228,7 +230,7 @@ a {
   height: 100vh;
   position: relative;
   overflow-x: clip;
-  background: rgba(24, 23, 25, 0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .welcome-container {
@@ -290,10 +292,11 @@ a {
   top: 0;
   width: 100vw;
   height: 600px;
-  background: rgba(24, 23, 25, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 }
 
 .about-me-text {
@@ -303,8 +306,13 @@ a {
   text-align: center;
 }
 
+hr.dashed {
+  border: 0;
+  border-top: 2px dashed #0e6b0e;
+}
+
 .projects-section {
-  background: #2b5329;
+  background: linear-gradient(0deg, #000000 0%, #000000 80%, rgba(0, 0, 0, 0.7) 100%);
   width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -312,30 +320,40 @@ a {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
+  background: #000000;
+  position: relative;
+  top: 0;
+  z-index: 5;
 }
 
 .projects-section-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  width: 60vw;
+  height: 500px;
+  background: #2b5329;
 }
 
 .project {
-  width: 49%;
-  height: 400px;
-  background: rgb(0, 0, 0);
+  width: 100px;
+  height: 300px;
+  background: #2b5329;
   border: 1px solid #149414;
   flex: 1;
 }
 
 .contact-section {
   display: flex;
+  position: relative;
+  top: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 100vw;
   height: 500px;
-  background: rgb(0, 0, 0);
+  background: #000000;
   margin-bottom: -10px;
 }
 
