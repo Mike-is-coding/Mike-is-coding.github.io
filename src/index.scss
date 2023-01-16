@@ -1,13 +1,14 @@
 /* Variables */
 $dark-hacker: #0e6b0e;
 $dark-dark-hacker: #2b5329;
-$flicker-green: radial-gradient(circle, #000000 0%, #000000 50%, #2b5329 100%);
-$flicker-static-green: g;
+$flicker-green: linear-gradient(90deg, #2b5329 0%, #000000 20%, #000000 70%, #2b5329 100%);
+$flicker-green-static: radial-gradient(circle, #000000 0%, #000000 60%, #149414 100%);
 $hacker: #149414;
 $light-hacker: #649568;
 $black: #000000;
-$trans-black: rgb(0, 0, 0, 0.7);
-$trans-gradient-black: linear-gradient(0deg, #000000 0%, #000000 80%, rgb(0, 0, 0, 0.7) 100%);
+$trans-black: rgb(0, 0, 0, 0.4);
+$trans-gradient-black: linear-gradient(0deg, #000000 0%, #000000 80%, rgb(0, 0, 0, 0.4) 100%);
+// $trans-gradient-black: radial-gradient(circle at top left, #000000 0%, #000000 80%, rgb(0, 0, 0, 0.4) 100%);
 
 @media only screen and (min-width: 600px) {
   body {
@@ -100,7 +101,7 @@ $trans-gradient-black: linear-gradient(0deg, #000000 0%, #000000 80%, rgb(0, 0, 
   0% {
     top: 0;
   } 100% {
-    top: 2000px;
+    top: 2500px;
   }
 }
 
@@ -175,7 +176,6 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.4;
-  color: var(--text-color);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -251,7 +251,7 @@ a {
 /* Specific css */
 
 .background {
-  height: fit-content;
+  height: 2500px;
   width: 100vw;
   background: $flicker-green;
   @include flicker();
@@ -281,7 +281,7 @@ a {
 .container {
   width: 100vw;
   height: fit-content;
-  margin: 0;
+  margin: -10px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -387,7 +387,7 @@ a {
   position: relative;
   top: 0;
   width: 100vw;
-  height: 600px;
+  height: fit-content;
   background: $trans-black;
   display: flex;
   justify-content: center;
@@ -400,6 +400,11 @@ a {
   width: 70vw;
   height: 400px;
   text-align: center;
+  white-space: pre-line;
+}
+
+.about-me-text > p {
+  font-size: 1.5rem;
 }
 
 hr.dashed {
@@ -415,7 +420,6 @@ hr.dashed {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: $black;
   position: relative;
   top: 0;
   z-index: 5;
@@ -423,20 +427,19 @@ hr.dashed {
 
 .projects-section-container {
   display: flex;
-  justify-content: center;
-  // position: relative;
-  // left: 20vw;
+  justify-content: space-around;
+  align-items: center;
   width: 60vw;
-  height: 500px;
+  height: 20vw;
   background: $dark-dark-hacker;
+  margin: 20px;
 }
 
 .project {
-  width: 100px;
-  height: 300px;
+  width: 40%;
+  height: 100%;
   background: $dark-dark-hacker;
   border: 1px solid $hacker;
-  flex: 1;
 }
 
 .contact-section {

@@ -33,7 +33,7 @@
     top: 0;
   }
   100% {
-    top: 2000px;
+    top: 2500px;
   }
 }
 @-webkit-keyframes flicker-static {
@@ -70,7 +70,6 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.4;
-  color: var(--text-color);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -141,11 +140,9 @@ a {
 
 /* Specific css */
 .background {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 2500px;
   width: 100vw;
-  background: radial-gradient(circle, #000000 0%, #000000 50%, #2b5329 100%);
+  background: linear-gradient(90deg, #2b5329 0%, #000000 20%, #000000 70%, #2b5329 100%);
   -webkit-animation: flickerAnimation 0.05s infinite;
   animation: flickerAnimation 0.05s infinite;
   z-index: 0;
@@ -154,7 +151,7 @@ a {
 .background-static {
   width: 100vw;
   height: 15px;
-  background: radial-gradient(circle, #000000 0%, #000000 50%, #2b5329 100%);
+  background: linear-gradient(90deg, #2b5329 0%, #000000 20%, #000000 70%, #2b5329 100%);
   position: absolute;
   top: 0;
   -webkit-animation: flicker-static 4s infinite;
@@ -165,7 +162,7 @@ a {
 .background-static2 {
   width: 100vw;
   height: 15px;
-  background: radial-gradient(circle, #000000 0%, #000000 50%, #2b5329 100%);
+  background: linear-gradient(90deg, #2b5329 0%, #000000 20%, #000000 70%, #2b5329 100%);
   position: absolute;
   top: 0;
   -webkit-animation: flicker-static 4s infinite;
@@ -184,7 +181,7 @@ a {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin: 0;
+  margin: -10px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -230,7 +227,7 @@ a {
   height: 100vh;
   position: relative;
   overflow-x: clip;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .welcome-container {
@@ -291,8 +288,10 @@ a {
   position: relative;
   top: 0;
   width: 100vw;
-  height: 600px;
-  background: rgba(0, 0, 0, 0.7);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -304,6 +303,11 @@ a {
   width: 70vw;
   height: 400px;
   text-align: center;
+  white-space: pre-line;
+}
+
+.about-me-text > p {
+  font-size: 1.5rem;
 }
 
 hr.dashed {
@@ -312,7 +316,7 @@ hr.dashed {
 }
 
 .projects-section {
-  background: linear-gradient(0deg, #000000 0%, #000000 80%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(0deg, #000000 0%, #000000 80%, rgba(0, 0, 0, 0.4) 100%);
   width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -321,7 +325,6 @@ hr.dashed {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: #000000;
   position: relative;
   top: 0;
   z-index: 5;
@@ -329,18 +332,19 @@ hr.dashed {
 
 .projects-section-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   width: 60vw;
-  height: 500px;
+  height: 20vw;
   background: #2b5329;
+  margin: 20px;
 }
 
 .project {
-  width: 100px;
-  height: 300px;
+  width: 40%;
+  height: 100%;
   background: #2b5329;
   border: 1px solid #149414;
-  flex: 1;
 }
 
 .contact-section {
