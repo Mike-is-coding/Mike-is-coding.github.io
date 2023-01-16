@@ -1,19 +1,21 @@
-/* Color variables */
+/* Variables */
 $dark-hacker: #0e6b0e;
 $dark-dark-hacker: #2b5329;
-$flicker-green: radial-gradient(circle, #181719 0%, #181719 50%, #2b5329 100%);
+$flicker-green: radial-gradient(circle, $black 0%, $black 50%, #2b5329 100%);
 $flicker-static-green: g;
 $hacker: #149414;
 $light-hacker: #649568;
-$black: #181719;
-$trans-black: rgb(24, 23, 25, 0.7);
-$black2: #1a1d10;
+$black: #000000;
+$trans-black: rgb(24, 23, 25, 0.99);
+$black2: #0F0F0F;
 
 @media only screen and (min-width: 600px) {
   body {
     min-width: 600;
   }
 }
+
+
 
 /* Mixins */
 @mixin flicker{
@@ -31,10 +33,21 @@ $black2: #1a1d10;
 }
 
 @mixin flicker-static {
-  -webkit-animation: flicker-static 2s infinite;
-  -moz-animation: flicker-static 2s infinite;
-  -o-animation: flicker-static 2s infinite;
-  animation: flicker-static 2s infinite;
+  -webkit-animation: flicker-static 4s infinite;
+  -moz-animation: flicker-static 4s infinite;
+  -o-animation: flicker-static 4s infinite;
+  animation: flicker-static 4s infinite;
+}
+
+@mixin flicker-static-delayed {
+  -webkit-animation: flicker-static 4s infinite;
+  -webkit-animation-delay: 3s;
+  -moz-animation: flicker-static 4s infinite;
+  -moz-animation-delay: 3s;
+  -o-animation: flicker-static 4s infinite;
+  -o-animation-delay: 3s;
+  animation: flicker-static 4s infinite;
+  animation-delay: 3s;
 }
 
 /* Animation keyframes */
@@ -87,7 +100,7 @@ $black2: #1a1d10;
   0% {
     top: 0;
   } 100% {
-    top: 1000px;
+    top: 2000px;
   }
 }
 
@@ -95,7 +108,7 @@ $black2: #1a1d10;
   0% {
     top: 0;
   } 100% {
-    top: 1000px;
+    top: 2000px;
   }
 }
 
@@ -103,7 +116,7 @@ $black2: #1a1d10;
   0% {
     top: 0;
   } 100% {
-    top: 1000px;
+    top: 2000px;
   }
 }
 
@@ -111,7 +124,7 @@ $black2: #1a1d10;
   0% {
     top: 0;
   } 100% {
-    top: 1000px;
+    top: 2000px;
   }
 }
 
@@ -204,6 +217,10 @@ h2 {
   font-size: 2rem;
 }
 
+p {
+  color: $dark-hacker;
+}
+
 ul {
   list-style: none;
 }
@@ -234,9 +251,9 @@ a {
 /* Specific css */
 
 .background {
-  height: 100vh;
+  height: 2000px;
   width: 100vw;
-  background: $flicker-green;
+  background: $black2;
   @include flicker();
   z-index: 0;
 }
@@ -248,6 +265,16 @@ a {
   position: absolute;
   top: 0;
   @include flicker-static();
+  z-index: 2;
+}
+
+.background-static2 {
+  width: 100vw;
+  height: 15px;
+  background: $flicker-green;
+  position: absolute;
+  top: 0;
+  @include flicker-static-delayed();
   z-index: 2;
 }
 
@@ -291,12 +318,6 @@ a {
   text-decoration: underline;
 }
 
-.boxington {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
 #welcome-section {
   display: flex;
   flex-direction: column;
@@ -306,7 +327,7 @@ a {
   height: 100vh;
   position: relative;
   overflow-x: clip;
-  background: $trans-black;
+  background: $black;
 }
 
 .welcome-container {
@@ -363,24 +384,32 @@ a {
 }
 
 .about-me {
+  position: relative;
+  top: 0;
   width: 100vw;
-  height: 400px;
-  background: $black;
+  height: 600px;
+  background: $trans-black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .about-me-text {
-  width: 500px;
-  height: fit-content;
-  background: $dark-dark-hacker;
+  display: inline-block;
+  width: 70vw;
+  height: 400px;
   text-align: center;
+}
+
+hr.dashed {
+  border: 0;
+  border-top: 2px dashed $dark-hacker;
+
 }
 
 .projects-section {
   background: $dark-dark-hacker;
-  width: 100vw;
+  width: 500px;
   height: fit-content;
   display: flex;
   justify-content: center;
@@ -389,12 +418,12 @@ a {
 
 .projects-section-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .project {
-  width: 49%;
-  height: 400px;
+  width: 20px;
+  height: 40px;
   background: $black;
   border: 1px solid $hacker;
   flex: 1;
@@ -408,7 +437,7 @@ a {
   text-align: center;
   width: 100vw;
   height: 500px;
-  background: $black;
+  background: $trans-black;
   margin-bottom: -10px;
 }
 

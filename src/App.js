@@ -1,11 +1,15 @@
 import "./App.css";
 import "./index.css";
 
+// const divHeight = document.getElementsByClassName("container").clientHeight;
+// document.getElementsByClassName("background").style.height = divHeight+"px";
+
 function App() {
   return (
     <>
       <div className="background"></div>
       <div className="background-static"></div>
+      <div className="background-static2"></div>
       <div className="container">
         {/* || Navbar */}
         <div id="nav-bar-div">
@@ -48,6 +52,10 @@ function App() {
             <h2>
               Hello my name is Miguel Fierro. I am a Front-End Developer
             </h2>
+            <hr className="dashed" />
+            <p>
+            {"I am an entry-level front-end developer with a passion for creating visually appealing and user-friendly websites and web applications. I have a solid understanding of HTML, CSS, JavaScript, and jQuery and am familiar with responsive design and popular front-end frameworks. I am a quick learner and am always eager to expand my skills and knowledge in the field. I am eager to learn and improve my skills, and dedicated to providing the best user experience."}
+            </p>
           </div>
         </section>
 

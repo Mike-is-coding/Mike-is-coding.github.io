@@ -33,7 +33,7 @@
     top: 0;
   }
   100% {
-    top: 1000px;
+    top: 2000px;
   }
 }
 @-webkit-keyframes flicker-static {
@@ -41,7 +41,7 @@
     top: 0;
   }
   100% {
-    top: 1000px;
+    top: 2000px;
   }
 }
 @keyframes typing {
@@ -75,13 +75,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  background: #181719;
+  background: rgb(0, 0, 0);
 }
 
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #149414 #181719;
+  scrollbar-color: #149414 rgb(0, 0, 0);
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -90,13 +90,13 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: #181719;
+  background: rgb(0, 0, 0);
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: #149414;
   border-radius: 20px;
-  border: 3px solid #181719;
+  border: 3px solid rgb(0, 0, 0);
 }
 
 code {
@@ -106,6 +106,10 @@ code {
 h2 {
   color: #149414;
   font-size: 2rem;
+}
+
+p {
+  color: #0e6b0e;
 }
 
 ul {
@@ -137,7 +141,7 @@ a {
 
 /* Specific css */
 .background {
-  height: 100vh;
+  height: 1500px;
   width: 100vw;
   background: radial-gradient(circle, #181719 0%, #181719 50%, #2b5329 100%);
   -webkit-animation: flickerAnimation 0.05s infinite;
@@ -151,8 +155,25 @@ a {
   background: radial-gradient(circle, #181719 0%, #181719 50%, #2b5329 100%);
   position: absolute;
   top: 0;
-  -webkit-animation: flicker-static 2s infinite;
-  animation: flicker-static 2s infinite;
+  -webkit-animation: flicker-static 4s infinite;
+  animation: flicker-static 4s infinite;
+  z-index: 2;
+}
+
+.background-static2 {
+  width: 100vw;
+  height: 15px;
+  background: radial-gradient(circle, #181719 0%, #181719 50%, #2b5329 100%);
+  position: absolute;
+  top: 0;
+  -webkit-animation: flicker-static 4s infinite;
+  -webkit-animation-delay: 3s;
+  -moz-animation: flicker-static 4s infinite;
+  -moz-animation-delay: 3s;
+  -o-animation: flicker-static 4s infinite;
+  -o-animation-delay: 3s;
+  animation: flicker-static 4s infinite;
+  animation-delay: 3s;
   z-index: 2;
 }
 
@@ -198,12 +219,6 @@ a {
   text-decoration: underline;
 }
 
-.boxington {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
 #welcome-section {
   display: flex;
   flex-direction: column;
@@ -245,16 +260,16 @@ a {
   color: #0e6b0e;
   -webkit-animation: typing 1s steps(30, end);
   -webkit-animation-fill-mode: forwards;
-  -webkit-animation-delay: 3.5s;
+  -webkit-animation-delay: 2.5s;
   -moz-animation: typing 1s steps(30, end);
   -moz-animation-fill-mode: forwards;
-  -moz-animation-delay: 3.5s;
+  -moz-animation-delay: 2.5s;
   -o-animation: typing 1s steps(30, end);
   -o-animation-fill-mode: forwards;
-  -o-animation-delay: 3.5s;
+  -o-animation-delay: 2.5s;
   animation: typing 1s steps(30, end);
   animation-fill-mode: forwards;
-  animation-delay: 3.5s;
+  animation-delay: 2.5s;
 }
 
 .scroll-cont {
@@ -271,20 +286,20 @@ a {
 }
 
 .about-me {
+  position: relative;
+  top: 0;
   width: 100vw;
-  height: 400px;
-  background: #181719;
+  height: 600px;
+  background: rgba(24, 23, 25, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .about-me-text {
-  width: 500px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  background: #2b5329;
+  display: inline-block;
+  width: 70vw;
+  height: 400px;
   text-align: center;
 }
 
@@ -307,7 +322,7 @@ a {
 .project {
   width: 49%;
   height: 400px;
-  background: #181719;
+  background: rgb(0, 0, 0);
   border: 1px solid #149414;
   flex: 1;
 }
@@ -320,7 +335,7 @@ a {
   text-align: center;
   width: 100vw;
   height: 500px;
-  background: #181719;
+  background: rgb(0, 0, 0);
   margin-bottom: -10px;
 }
 
