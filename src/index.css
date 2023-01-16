@@ -33,7 +33,7 @@
     top: 0;
   }
   100% {
-    top: 2500px;
+    top: 2000px;
   }
 }
 @-webkit-keyframes flicker-static {
@@ -140,7 +140,7 @@ a {
 
 /* Specific css */
 .background {
-  height: 2500px;
+  height: 2000px;
   width: 100vw;
   background: linear-gradient(90deg, #2b5329 0%, #000000 20%, #000000 70%, #2b5329 100%);
   -webkit-animation: flickerAnimation 0.05s infinite;
@@ -201,8 +201,24 @@ a {
   left: 0;
   width: 100vw;
   height: 50px;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
+}
+
+.navbar-hamburger {
+  background: #000000;
+  width: 30px;
+  height: 20px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background: #149414;
+  border-radius: 1px;
 }
 
 .nav-list {
@@ -316,7 +332,7 @@ hr.dashed {
 }
 
 .projects-section {
-  background: linear-gradient(0deg, #000000 0%, #000000 80%, rgba(0, 0, 0, 0.4) 100%);
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.4) 100%);
   width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;

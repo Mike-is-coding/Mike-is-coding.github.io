@@ -7,13 +7,16 @@ $hacker: #149414;
 $light-hacker: #649568;
 $black: #000000;
 $trans-black: rgb(0, 0, 0, 0.4);
-$trans-gradient-black: linear-gradient(0deg, #000000 0%, #000000 80%, rgb(0, 0, 0, 0.4) 100%);
-// $trans-gradient-black: radial-gradient(circle at top left, #000000 0%, #000000 80%, rgb(0, 0, 0, 0.4) 100%);
+$trans-gradient-black: linear-gradient(0deg, #000000 0%, rgb(0, 0, 0, 0.4) 100%);
 
 @media only screen and (min-width: 600px) {
   body {
     min-width: 600;
   }
+}
+
+@media only screen and (min-width: 1200px) {
+  
 }
 
 
@@ -101,7 +104,7 @@ $trans-gradient-black: linear-gradient(0deg, #000000 0%, #000000 80%, rgb(0, 0, 
   0% {
     top: 0;
   } 100% {
-    top: 2500px;
+    top: 2000px;
   }
 }
 
@@ -251,7 +254,7 @@ a {
 /* Specific css */
 
 .background {
-  height: 2500px;
+  height: 2000px;
   width: 100vw;
   background: $flicker-green;
   @include flicker();
@@ -301,8 +304,29 @@ a {
   left: 0;
   width: 100vw;
   height: 50px;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
+}
+
+// .nav-list {
+//   position: absolute;
+//   right: 0;
+// }
+
+.navbar-hamburger {
+  background: $black;
+  width: 30px;
+  height: 20px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background: $hacker;
+  border-radius: 1px;
 }
 
 .nav-list {

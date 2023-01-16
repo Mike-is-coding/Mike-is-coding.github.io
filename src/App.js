@@ -19,12 +19,17 @@ function App() {
                 <a href="#welcome-section">About</a>
               </li>
               <li className="nav-item">
-                <a href="#projects">Work</a>
+                <a href="#projects-section">Portfolio</a>
               </li>
               <li className="nav-item">
                 <a href="#contact-me">Contact</a>
               </li>
             </ul>
+            <div className="navbar-hamburger">
+              <div className="bar" ></div>
+              <div className="bar"></div>
+              <div className="bar" ></div>
+            </div>
           </nav>
         </div>
 
@@ -56,7 +61,7 @@ function App() {
               <hr className="dashed" />
               <p>
                 {
-                  "I am an entry-level front-end developer with a passion for creating visually appealing and user-friendly, responsive, websites and web applications. I have a solid understanding of HTML, CSS, JavaScript, and jQuery and am familiar with responsive design and popular front-end frameworks. I am a quick learner and am always eager to expand my skills and knowledge in the field. I am eager to learn and improve my skills, and dedicated to providing the best user experience."
+                  "I am an entry-level front-end developer with a passion for creating visually appealing and user-friendly websites and web applications. I have a solid understanding of HTML, CSS, JavaScript, and jQuery and am familiar with responsive design and popular front-end frameworks such as Reactjs. I am a quick learner and am always eager to expand my skills and knowledge in the field. I am eager to learn and improve my skills, and dedicated to providing the best user experience."
                 }
               </p>
             </div>
@@ -64,7 +69,7 @@ function App() {
         </section>
 
         {/* || Projects Section */}
-        <section className="projects-section">
+        <section className="projects-section" id="projects-section">
           <div className="projects-section-container">
             <div className="project"></div>
             <div className="project"></div>
