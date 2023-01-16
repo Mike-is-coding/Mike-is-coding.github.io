@@ -12,26 +12,32 @@ function App() {
       <div className="background-static2"></div>
       <div className="container">
         {/* || Navbar */}
-        <div id="nav-bar-div">
-          <nav id="navbar">
-            <ul className="nav-list">
-              <li className="nav-item">
-                <a href="#welcome-section">About</a>
-              </li>
-              <li className="nav-item">
-                <a href="#projects-section">Portfolio</a>
-              </li>
-              <li className="nav-item">
-                <a href="#contact-me">Contact</a>
-              </li>
-            </ul>
-            <div className="navbar-hamburger">
-              <div className="bar" ></div>
-              <div className="bar"></div>
-              <div className="bar" ></div>
+        <nav>
+          <div class="navbar">
+            <div class="navbar-container nav-container">
+              <input class="checkbox" type="checkbox" name="" id="" />
+              <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+              </div>
+              <div class="menu-items">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">About</a>
+                </li>
+                <li>
+                  <a href="#">Portfolio</a>
+                </li>
+                <li>
+                  <a href="#">contact</a>
+                </li>
+              </div>
             </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
 
         {/* || Welcome Section */}
         <section id="welcome-section">
@@ -56,7 +62,7 @@ function App() {
           <div className="about-me-container">
             <div className="about-me-text">
               <h2>
-                Hello my name is Miguel Fierro. I am a Front-End Developer
+                Hello my name is Miguel Fierro, and I am a Front-End Developer.
               </h2>
               <hr className="dashed" />
               <p>
@@ -70,13 +76,14 @@ function App() {
 
         {/* || Projects Section */}
         <section className="projects-section" id="projects-section">
+          <h2>Portfolio</h2>
           <div className="projects-section-container">
             <div className="project"></div>
             <div className="project"></div>
           </div>
           <div className="projects-section-container">
             <div className="project"></div>
-            <div className="project"></div>
+            {/* <div className="project"></div> */}
           </div>
         </section>
 
