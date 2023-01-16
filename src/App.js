@@ -13,26 +13,27 @@ function App() {
       <div className="container">
         {/* || Navbar */}
         <nav>
-          <div class="navbar">
-            <div class="navbar-container nav-container">
-              <input class="checkbox" type="checkbox" name="" id="" />
-              <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
+          <div className="nav-box"></div>
+          <div className="navbar">
+            <div className="navbar-container nav-container">
+              <input className="checkbox" type="checkbox" name="" id="" />
+              <div className="hamburger-lines">
+                <span className="line line1"></span>
+                <span className="line line2"></span>
+                <span className="line line3"></span>
               </div>
-              <div class="menu-items">
+              <div className="menu-items">
                 <li>
-                  <a href="#welcome-section" target="_blank" rel="noreferrer">Home</a>
+                  <a href="#welcome-section">Home</a>
                 </li>
                 <li>
-                  <a href="#about-me" target="_blank" rel="noreferrer">About</a>
+                  <a href="#about-me">About</a>
                 </li>
                 <li>
-                  <a href="#portfolio" target="_blank" rel="noreferrer">Portfolio</a>
+                  <a href="#portfolio">Portfolio</a>
                 </li>
                 <li>
-                  <a href="#contact" target="_blank" rel="noreferrer">Contact</a>
+                  <a href="#contact">Contact</a>
                 </li>
               </div>
             </div>
