@@ -17,23 +17,23 @@ function App() {
           <div className="navbar">
             <div className="navbar-container nav-container">
               <input className="checkbox" type="checkbox" name="" id="" />
-              <div className="hamburger-lines">
+              <div className="hamburger-lines" alt="Menu" title="Menu">
                 <span className="line line1"></span>
                 <span className="line line2"></span>
                 <span className="line line3"></span>
               </div>
               <div className="menu-items">
                 <li>
-                  <a href="#welcome-section">Home</a>
+                  <a className="home" href="#welcome-section">Home</a>
                 </li>
                 <li>
-                  <a href="#about-me">About</a>
+                  <a className="about" href="#about-me">About</a>
                 </li>
                 <li>
-                  <a href="#portfolio">Portfolio</a>
+                  <a className="portfolio" href="#portfolio">Portfolio</a>
                 </li>
                 <li>
-                  <a href="#contact">Contact</a>
+                  <a className="contact" href="#contact">Contact</a>
                 </li>
               </div>
             </div>
