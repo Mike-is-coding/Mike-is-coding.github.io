@@ -23,16 +23,16 @@ function App() {
               </div>
               <div class="menu-items">
                 <li>
-                  <a href="#">Home</a>
+                  <a href="#welcome-section" target="_blank" rel="noreferrer">Home</a>
                 </li>
                 <li>
-                  <a href="#">About</a>
+                  <a href="#about-me" target="_blank" rel="noreferrer">About</a>
                 </li>
                 <li>
-                  <a href="#">Portfolio</a>
+                  <a href="#portfolio" target="_blank" rel="noreferrer">Portfolio</a>
                 </li>
                 <li>
-                  <a href="#">contact</a>
+                  <a href="#contact" target="_blank" rel="noreferrer">Contact</a>
                 </li>
               </div>
             </div>
@@ -58,7 +58,7 @@ function App() {
         </section>
 
         {/* || About Me Section */}
-        <section className="about-me">
+        <section className="about-me" id="about-me">
           <div className="about-me-container">
             <div className="about-me-text">
               <h2>
@@ -75,7 +75,7 @@ function App() {
         </section>
 
         {/* || Projects Section */}
-        <section className="projects-section" id="projects-section">
+        <section className="projects-section" id="portfolio">
           <h2>Portfolio</h2>
           <div className="projects-section-container">
             <div className="project"></div>
@@ -88,7 +88,7 @@ function App() {
         </section>
 
         {/* || Contact Section */}
-        <section id="contact-me" className="contact-section">
+        <section id="contact" className="contact-section">
           <div className="contact-section-header">
             <h2 className="contact-title"> Lets Work Together...</h2>
           </div>
