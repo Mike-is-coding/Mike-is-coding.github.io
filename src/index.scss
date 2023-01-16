@@ -24,10 +24,10 @@ $black2: #1a1d10;
 }
 
 @mixin flicker-slow {
-  -webkit-animation: flickerAnimation 3s infinite;
-  -moz-animation: flickerAnimation 3s infinite;
-  -o-animation: flickerAnimation 3s infinite;
-  animation: flickerAnimation 3s infinite;
+  -webkit-animation: flickerAnimation 5s infinite;
+  -moz-animation: flickerAnimation 5s infinite;
+  -o-animation: flickerAnimation 5s infinite;
+  animation: flickerAnimation 5s infinite;
 }
 
 @mixin flicker-static {
@@ -115,6 +115,47 @@ $black2: #1a1d10;
   }
 }
 
+@keyframes typing {
+  from {
+    width: 0;
+    border-right: 10px solid $hacker;
+  }
+  to {
+    width: 100%;
+    border-right: 0px solid $hacker;
+  }
+}
+@-o-keyframes typing {
+  from {
+    width: 0;
+    border-right: 10px solid $hacker;
+  }
+  to {
+    width: 100%;
+    border-right: 0px solid $hacker;
+  }
+}
+@-moz-keyframes typing {
+  from {
+    width: 0;
+    border-right: 10px solid $hacker;
+  }
+  to {
+    width: 100%;
+    border-right: 0px solid $hacker;
+  }
+}
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+    border-right: 10px solid $hacker;
+  }
+  to {
+    width: 100%;
+    border-right: 0px solid $hacker;
+  }
+}
+
 /* Default page css */
 body {
   font-family: "Poppins", sans-serif;
@@ -156,6 +197,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h2 {
+  color: $hacker;
+  font-size: 2rem;
 }
 
 ul {
@@ -245,6 +291,12 @@ a {
   text-decoration: underline;
 }
 
+.boxington {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 #welcome-section {
   display: flex;
   flex-direction: column;
@@ -257,30 +309,73 @@ a {
   background: $trans-black;
 }
 
+.welcome-container {
+  display: inline-block;
+}
+
 .welcome-text {
   color: $hacker;
   text-align: center;
   font-size: 5rem;
-  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  -webkit-animation: typing 1s steps(30, end);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation: typing 1s steps(30, end);
+  -moz-animation-fill-mode: forwards;
+  -o-animation: typing 1s steps(30, end);
+  -o-animation-fill-mode: forwards;
+  animation: typing 1s steps(30, end);
+  animation-fill-mode: forwards;
 }
 
-#welcome-section > p {
+.welcome-container2 > p {
   font-size: 2rem;
   font-weight: 200;
   font-style: italic;
   margin-top: 0px;
   color: $dark-hacker;
+  -webkit-animation: typing 1s steps(30, end);
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 3.5s;
+  -moz-animation: typing 1s steps(30, end);
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-delay: 3.5s;
+  -o-animation: typing 1s steps(30, end);
+  -o-animation-fill-mode: forwards;
+  -o-animation-delay: 3.5s;
+  animation: typing 1s steps(30, end);
+  animation-fill-mode: forwards;
+  animation-delay: 3.5s;
 }
 
 .scroll-cont {
   position: absolute;
   bottom: 0px;
-  font-size: 50px;
+  margin-top: 0px;
+  color: $dark-hacker;
 }
 
 .scroll-text {
   font-size: 20px;
   @include flicker-slow();
+}
+
+.about-me {
+  width: 100vw;
+  height: 400px;
+  background: $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-text {
+  width: 500px;
+  height: fit-content;
+  background: $dark-dark-hacker;
+  text-align: center;
 }
 
 .projects-section {

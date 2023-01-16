@@ -44,6 +44,26 @@
     top: 1000px;
   }
 }
+@keyframes typing {
+  from {
+    width: 0;
+    border-right: 10px solid #149414;
+  }
+  to {
+    width: 100%;
+    border-right: 0px solid #149414;
+  }
+}
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+    border-right: 10px solid #149414;
+  }
+  to {
+    width: 100%;
+    border-right: 0px solid #149414;
+  }
+}
 /* Default page css */
 body {
   font-family: "Poppins", sans-serif;
@@ -81,6 +101,11 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+h2 {
+  color: #149414;
+  font-size: 2rem;
 }
 
 ul {
@@ -173,6 +198,12 @@ a {
   text-decoration: underline;
 }
 
+.boxington {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 #welcome-section {
   display: flex;
   flex-direction: column;
@@ -185,31 +216,76 @@ a {
   background: rgba(24, 23, 25, 0.7);
 }
 
+.welcome-container {
+  display: inline-block;
+}
+
 .welcome-text {
   color: #149414;
   text-align: center;
   font-size: 5rem;
-  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  -webkit-animation: typing 1s steps(30, end);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation: typing 1s steps(30, end);
+  -moz-animation-fill-mode: forwards;
+  -o-animation: typing 1s steps(30, end);
+  -o-animation-fill-mode: forwards;
+  animation: typing 1s steps(30, end);
+  animation-fill-mode: forwards;
 }
 
-#welcome-section > p {
+.welcome-container2 > p {
   font-size: 2rem;
   font-weight: 200;
   font-style: italic;
   margin-top: 0px;
   color: #0e6b0e;
+  -webkit-animation: typing 1s steps(30, end);
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 3.5s;
+  -moz-animation: typing 1s steps(30, end);
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-delay: 3.5s;
+  -o-animation: typing 1s steps(30, end);
+  -o-animation-fill-mode: forwards;
+  -o-animation-delay: 3.5s;
+  animation: typing 1s steps(30, end);
+  animation-fill-mode: forwards;
+  animation-delay: 3.5s;
 }
 
 .scroll-cont {
   position: absolute;
   bottom: 0px;
-  font-size: 50px;
+  margin-top: 0px;
+  color: #0e6b0e;
 }
 
 .scroll-text {
   font-size: 20px;
-  -webkit-animation: flickerAnimation 3s infinite;
-  animation: flickerAnimation 3s infinite;
+  -webkit-animation: flickerAnimation 5s infinite;
+  animation: flickerAnimation 5s infinite;
+}
+
+.about-me {
+  width: 100vw;
+  height: 400px;
+  background: #181719;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-text {
+  width: 500px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #2b5329;
+  text-align: center;
 }
 
 .projects-section {
