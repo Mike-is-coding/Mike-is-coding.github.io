@@ -26,16 +26,24 @@ function App() {
               </div>
               <div className="menu-items">
                 <li>
-                  <a className="home" href="#welcome-section">Home</a>
+                  <a className="home" href="#welcome-section">
+                    Home
+                  </a>
                 </li>
                 <li>
-                  <a className="about" href="#about-me">About</a>
+                  <a className="about" href="#about-me">
+                    About
+                  </a>
                 </li>
                 <li>
-                  <a className="portfolio" href="#portfolio">Portfolio</a>
+                  <a className="portfolio" href="#portfolio">
+                    Portfolio
+                  </a>
                 </li>
                 <li>
-                  <a className="contact" href="#contact">Contact</a>
+                  <a className="contact" href="#contact">
+                    Contact
+                  </a>
                 </li>
               </div>
             </div>
@@ -65,7 +73,7 @@ function App() {
           <div className="about-me-container">
             <div className="about-me-text">
               <h2>
-                Hello my name is Miguel Fierro, and I am a Front-End Developer.
+                Hello my name is Miguel Fierro
               </h2>
               <hr className="dashed" />
               <p>
@@ -82,12 +90,34 @@ function App() {
           <h2>Portfolio</h2>
           <div className="projects-section-container">
             <div className="project">
-              <img id="jscalc" src={logo} alt="Javascript Calculator"/>
-              <span><a href="https://mike-is-coding.github.io/Javascript-Calculator/">JavaScript Calculator</a></span>
+              <div className="preview">
+                <a
+                  href="https://mike-is-coding.github.io/Javascript-Calculator/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img id="jscalc" src={logo} alt="Javascript Calculator" />
+                </a>
+              </div>
+              <div className="preview-text">
+                <p>
+                  <span>JavaScript Calculator</span>
+                </p>
+              </div>
             </div>
             <div className="project">
-              <img src={pomodoroClock} alt="Pomodoro Clock"/>
-              <span><a href="https://mike-is-coding.github.io/25-Clock/">Pomodoro Clock</a></span>
+              <div className="preview">
+                <a
+                  href="https://mike-is-coding.github.io/25-Clock/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={pomodoroClock} alt="Pomodoro Clock" />
+                </a>
+              </div>
+              <div className="preview-text">
+                <p><span>Pomodoro Clock</span></p>
+              </div>
             </div>
           </div>
           <div className="projects-section-container">
@@ -122,7 +152,7 @@ function App() {
             </a>
             <a
               id="my-linkedin"
-              href="https://facebook.com/freecodecamp"
+              href="https://www.linkedin.com/in/miguel-fierro-04b23a252/"
               target="_blank"
               className="btn contact-details"
               rel="noreferrer"

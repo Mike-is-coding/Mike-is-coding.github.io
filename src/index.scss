@@ -293,7 +293,7 @@ code {
 
 h2 {
   color: $hacker;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 p {
@@ -307,6 +307,12 @@ ul {
 a {
   text-decoration: none;
   color: $light-hacker;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .fab {
@@ -326,34 +332,6 @@ a {
   text-rendering: auto;
   line-height: 1;
 }
-
-/* Scrolling */
-// .panel {
-//   width: 100%;
-//   height: 500px;
-//   z-index:0; 
-//   -webkit-transform: translateZ( 0 );
-//   transform: translateZ( 0 );
-//   -webkit-transition: -webkit-transform 0.6s ease-in-out;
-//   transition: transform 0.6s ease-in-out;
-//   -webkit-backface-visibility: hidden;
-//   backface-visibility: hidden;
-// }
-
-// a[ id= "welcome-scroll" ]:target ~ #welcome-section div.panel {
-//   -webkit-transform: translateY( 0px);
-//   transform: translateY( 0px );
-// }
-
-// a[ id= "about-scroll" ]:target ~ #about-me div.panel {
-//   -webkit-transform: translateY( -200px);
-//   transform: translateY( -200px );
-// }
-
-// a[ id= "portfolio" ]:target ~ #portfolio section.panel {
-//   -webkit-transform: translateY( -400px);
-//   transform: translateY( -400px );
-// }
 
 /* Specific css */
 
@@ -645,7 +623,11 @@ a {
   // background: white;
 }
 
-.about-me-text > p {
+.about-me-text h2 {
+  font-size: 2rem;
+}
+
+.about-me-text  p {
   font-size: 1.5rem;
 }
 
@@ -681,10 +663,32 @@ hr.dashed {
 }
 
 .project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 40%;
   height: 100%;
   // background: $dark-dark-hacker;
   border: 2px solid $hacker;
+}
+
+//Portfolio previews css
+.preview {
+  width: 90%;
+  height: 70%;
+}
+
+.preview-text {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+}
+
+.preview-text p{
+  color:$dark-hacker;
+  margin: 10px;
+  font-size: 25px;
 }
 
 /* || Contact Section */
