@@ -170,6 +170,19 @@ a {
   line-height: 1;
 }
 
+/* Scrolling */
+.panel {
+  transition: transform 0.6s ease-in-out;
+}
+
+a[id=welcome]:target ~ #welcome-section section.panel {
+  transform: translateY(0px);
+}
+
+a[id=about]:target ~ #about-me section.panel {
+  transform: translateY(-200px);
+}
+
 /* Specific css */
 .background {
   height: 2000px;
