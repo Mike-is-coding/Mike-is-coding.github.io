@@ -97,6 +97,10 @@
   }
 }
 /* Default page css */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
@@ -171,18 +175,6 @@ a {
 }
 
 /* Scrolling */
-.panel {
-  transition: transform 0.6s ease-in-out;
-}
-
-a[id=welcome]:target ~ #welcome-section section.panel {
-  transform: translateY(0px);
-}
-
-a[id=about]:target ~ #about-me section.panel {
-  transform: translateY(-200px);
-}
-
 /* Specific css */
 .background {
   height: 2000px;
@@ -400,6 +392,7 @@ a[id=about]:target ~ #about-me section.panel {
   overflow-x: clip;
   background: rgba(0, 0, 0, 0.4);
   margin-top: -20px;
+  scroll-margin-top: 50px;
 }
 
 .welcome-container {
@@ -459,7 +452,7 @@ a[id=about]:target ~ #about-me section.panel {
 .about-me {
   position: relative;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -468,6 +461,7 @@ a[id=about]:target ~ #about-me section.panel {
   justify-content: center;
   align-items: center;
   z-index: 5;
+  scroll-margin-top: 50px;
 }
 
 .about-me-text {
@@ -476,6 +470,7 @@ a[id=about]:target ~ #about-me section.panel {
   height: 400px;
   text-align: center;
   white-space: pre-line;
+  background: white;
 }
 
 .about-me-text > p {
@@ -501,6 +496,7 @@ hr.dashed {
   position: relative;
   top: 0;
   z-index: 5;
+  scroll-margin-top: 50px;
 }
 
 .projects-section-container {
@@ -531,6 +527,7 @@ hr.dashed {
   height: 500px;
   background: #000000;
   margin-bottom: -10px;
+  scroll-margin-top: 50px;
 }
 
 .contact-title {

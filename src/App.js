@@ -27,13 +27,13 @@ function App() {
                   <a className="home" href="#welcome-section">Home</a>
                 </li>
                 <li>
-                  <a className="about" href="#about-me" id="about">About</a>
+                  <a className="about" href="#about-me">About</a>
                 </li>
                 <li>
-                  <a className="portfolio" href="#portfolio" id="portfolio">Portfolio</a>
+                  <a className="portfolio" href="#portfolio">Portfolio</a>
                 </li>
                 <li>
-                  <a className="contact" href="#contact" id="contact">Contact</a>
+                  <a className="contact" href="#contact">Contact</a>
                 </li>
               </div>
             </div>
@@ -41,7 +41,7 @@ function App() {
         </nav>
 
         {/* || Welcome Section */}
-        <section className="panel" id="welcome-section">
+        <section id="welcome-section">
           <div className="welcome-container">
             <h1 className="welcome-text">Hey I'm Miguel</h1>
           </div>
@@ -59,7 +59,7 @@ function App() {
         </section>
 
         {/* || About Me Section */}
-        <section className="panel about-me" id="about-me">
+        <section className="about-me" id="about-me">
           <div className="about-me-container">
             <div className="about-me-text">
               <h2>
@@ -76,7 +76,7 @@ function App() {
         </section>
 
         {/* || Projects Section */}
-        <section className="panel projects-section" id="portfolio">
+        <section className="projects-section" id="portfolio">
           <h2>Portfolio</h2>
           <div className="projects-section-container">
             <div className="project"></div>
@@ -89,7 +89,7 @@ function App() {
         </section>
 
         {/* || Contact Section */}
-        <section id="contact" className="panel contact-section">
+        <section id="contact" className="contact-section">
           <div className="contact-section-header">
             <h2 className="contact-title"> Lets Work Together...</h2>
           </div>
