@@ -1,9 +1,4 @@
 /* Variables */
-@media only screen and (min-width: 600px) {
-  body {
-    min-width: 600;
-  }
-}
 /* Mixins */
 /* Animation keyframes */
 @keyframes flickerAnimation {
@@ -138,9 +133,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+h1 {
+  font-size: 10vw;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+       text-size-adjust: none;
+}
+
 h2 {
   color: #149414;
-  font-size: 2.5rem;
+  font-size: 7vw;
 }
 
 p {
@@ -185,7 +187,7 @@ img {
 .background {
   height: 2000px;
   width: 100vw;
-  background: linear-gradient(90deg, #2b5329 0%, #000000 20%, #000000 70%, #2b5329 100%);
+  background: linear-gradient(90deg, #2b5329 0%, #000000 15%, #000000 85%, #2b5329 100%);
   -webkit-animation: flickerAnimation 0.05s infinite;
   animation: flickerAnimation 0.05s infinite;
   z-index: 0;
@@ -194,7 +196,7 @@ img {
 .background-static {
   width: 100vw;
   height: 15px;
-  background: linear-gradient(90deg, #2b5329 0%, #000000 20%, #000000 70%, #2b5329 100%);
+  background: linear-gradient(90deg, #2b5329 0%, #000000 15%, #000000 85%, #2b5329 100%);
   position: absolute;
   top: 0;
   -webkit-animation: flicker-static 4s infinite;
@@ -205,7 +207,7 @@ img {
 .background-static2 {
   width: 100vw;
   height: 15px;
-  background: linear-gradient(90deg, #2b5329 0%, #000000 20%, #000000 70%, #2b5329 100%);
+  background: linear-gradient(90deg, #2b5329 0%, #000000 15%, #000000 85%, #2b5329 100%);
   position: absolute;
   top: 0;
   -webkit-animation: flicker-static 4s infinite;
@@ -306,7 +308,7 @@ img {
   height: 26px;
   width: 32px;
   position: fixed;
-  top: 15px;
+  top: 13px;
   left: 20px;
   z-index: 6;
   display: flex;
@@ -341,10 +343,10 @@ img {
   position: fixed;
   height: 40px;
   width: 350px;
-  transform: translate(-150%);
+  transform: translate(-250%);
   display: flex;
   flex-direction: row;
-  margin-left: -150px;
+  margin-left: 1em;
   transition: transform 0.5s ease-in-out;
   text-align: center;
   color: #149414;
@@ -408,7 +410,6 @@ img {
 .welcome-text {
   color: #149414;
   text-align: center;
-  font-size: 5rem;
   overflow: hidden;
   white-space: nowrap;
   width: 0;
@@ -423,7 +424,6 @@ img {
 }
 
 .welcome-container2 > p {
-  font-size: 2rem;
   font-weight: 200;
   font-style: italic;
   margin-top: 0px;
@@ -478,12 +478,8 @@ img {
   white-space: pre-line;
 }
 
-.about-me-text h2 {
-  font-size: 2rem;
-}
-
 .about-me-text p {
-  font-size: 1.5rem;
+  font-size: 4vw;
 }
 
 hr.dashed {
@@ -508,13 +504,17 @@ hr.dashed {
   scroll-margin-top: 50px;
 }
 
+.projects-section h2 {
+  margin-top: 20px;
+}
+
 .projects-section-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
+  width: 80vw;
   height: 25vw;
-  margin: 20px;
+  margin: 50px;
 }
 
 .project {
@@ -522,14 +522,15 @@ hr.dashed {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 40%;
-  height: 100%;
+  width: 35vw;
+  height: 40vw;
   border: 2px solid #149414;
 }
 
 .preview {
   width: 90%;
   height: 70%;
+  margin-top: 10px;
 }
 
 .preview-text {
@@ -542,8 +543,8 @@ hr.dashed {
 
 .preview-text p {
   color: #0e6b0e;
-  margin: 10px;
-  font-size: 25px;
+  margin: 1vw;
+  font-size: 4vw;
 }
 
 /* || Contact Section */
@@ -563,21 +564,22 @@ hr.dashed {
 }
 
 .contact-title {
-  color: green;
+  color: #149414;
 }
 
-.contact-links {
+.contact-link {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
   max-width: 980px;
-  margin-top: 4rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
   flex-wrap: wrap;
 }
 
 .contact-details {
-  font-size: 1.5rem;
-  text-shadow: 2px 2px 1px #1f1f1f;
+  text-shadow: 2px 2px 1px #2b5329;
   transition: transform 0.3s ease-out;
 }
 
@@ -593,4 +595,6 @@ hr.dashed {
 
 .contact-link > a {
   color: #149414;
+  font-size: 5vw;
+  margin: 1em;
 }/*# sourceMappingURL=index.css.map */

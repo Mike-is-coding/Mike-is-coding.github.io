@@ -1,7 +1,7 @@
 /* Variables */
 $dark-hacker: #0e6b0e;
 $dark-dark-hacker: #2b5329;
-$flicker-green: linear-gradient(90deg, #2b5329 0%, #000000 20%, #000000 70%, #2b5329 100%);
+$flicker-green: linear-gradient(90deg, #2b5329 0%, #000000 15%, #000000 85%, #2b5329 100%);
 $flicker-green-static: radial-gradient(circle, #000000 0%, #000000 60%, #149414 100%);
 $hacker: #149414;
 $light-hacker: #649568;
@@ -9,15 +9,30 @@ $black: #000000;
 $trans-black: rgb(0, 0, 0, 0.4);
 $trans-gradient-black: linear-gradient(to top, #000000 0%, rgb(0, 0, 0, 0.4) 100%);
 
-@media only screen and (min-width: 600px) {
-  body {
-    min-width: 600;
-  }
-}
+// @media only screen and (max-width: 600px) {
+//   body {
+//     min-width: 600;
+//     background: white;
+//   }
 
-@media only screen and (min-width: 1200px) {
-  
-}
+//   #welcome-section {
+//     background: white;
+//   }
+
+//   h1 {
+//     font-size: 20px;
+//   }
+
+//   .preview-text p {
+//     font-size: 1px;
+//   }
+// }
+
+// @media (min-width: 2000px) {
+//   .background {
+//     background: linear-gradient(90deg, #2b5329 0%, #000000 10%, #000000 90%, #2b5329 100%);
+//   }
+// }
 
 
 
@@ -291,9 +306,18 @@ code {
     monospace;
 }
 
+h1 {
+  font-size: 10vw;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  // @media (max-width: 600px) {
+  //   font-size: 10vw;
+  // }
+}
+
 h2 {
   color: $hacker;
-  font-size: 2.5rem;
+  font-size: 7vw;
 }
 
 p {
@@ -449,7 +473,7 @@ img {
   height: 26px;
   width: 32px;
   position: fixed;
-  top: 15px;
+  top: 13px;
   left: 20px;
   z-index: 6;
   display: flex;
@@ -484,10 +508,10 @@ img {
   position: fixed;
   height: 40px;
   width: 350px;
-  transform: translate(-150%);
+  transform: translate(-250%);
   display: flex;
   flex-direction: row;
-  margin-left: -150px;
+  margin-left: 1em;
   transition: transform 0.5s ease-in-out;
   text-align: center;
   // background: $black;
@@ -553,7 +577,6 @@ img {
 .welcome-text {
   color: $hacker;
   text-align: center;
-  font-size: 5rem;
   overflow: hidden;
   white-space: nowrap;
   width: 0;
@@ -568,7 +591,6 @@ img {
 }
 
 .welcome-container2 > p {
-  font-size: 2rem;
   font-weight: 200;
   font-style: italic;
   margin-top: 0px;
@@ -623,12 +645,12 @@ img {
   // background: white;
 }
 
-.about-me-text h2 {
-  font-size: 2rem;
-}
+// .about-me-text h2 {
+//   font-size: 2rem;
+// }
 
 .about-me-text  p {
-  font-size: 1.5rem;
+  font-size: 4vw;
 }
 
 hr.dashed {
@@ -652,14 +674,18 @@ hr.dashed {
   scroll-margin-top: 50px;
 }
 
+.projects-section h2 {
+  margin-top: 20px;
+}
+
 .projects-section-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
+  width: 80vw;
   height: 25vw;
   // background: $dark-dark-hacker;
-  margin: 20px;
+  margin: 50px;
 }
 
 .project {
@@ -667,16 +693,17 @@ hr.dashed {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 40%;
-  height: 100%;
-  // background: $dark-dark-hacker;
+  width: 35vw;
+  height: 40vw;
   border: 2px solid $hacker;
+  // white-space: nowrap;
 }
 
 //Portfolio previews css
 .preview {
   width: 90%;
   height: 70%;
+  margin-top: 10px;
 }
 
 .preview-text {
@@ -685,10 +712,10 @@ hr.dashed {
   text-align: center;
 }
 
-.preview-text p{
+.preview-text p {
   color:$dark-hacker;
-  margin: 10px;
-  font-size: 25px;
+  margin: 1vw;
+  font-size: 4vw;
 }
 
 /* || Contact Section */
@@ -709,21 +736,23 @@ hr.dashed {
 }
 
 .contact-title {
-  color: green;
+  color: $hacker;
+
 }
 
-.contact-links {
+.contact-link {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
   max-width: 980px;
-  margin-top: 4rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
   flex-wrap: wrap;
 }
 
 .contact-details {
-  font-size: 1.5rem;
-  text-shadow: 2px 2px 1px #1f1f1f;
+  text-shadow: 2px 2px 1px $dark-dark-hacker;
   transition: transform 0.3s ease-out;
 }
 
@@ -739,4 +768,6 @@ hr.dashed {
 
 .contact-link > a {
   color: $hacker;
+  font-size: 5vw;
+  margin: 1em;
 }
