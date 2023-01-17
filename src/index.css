@@ -442,6 +442,7 @@ a {
   animation: flickerAnimation 5s infinite;
 }
 
+/* || About Me Section */
 .about-me {
   position: relative;
   top: 0;
@@ -473,6 +474,7 @@ hr.dashed {
   border-top: 2px dashed #0e6b0e;
 }
 
+/* || Portfolio Section */
 .projects-section {
   background: linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0.4) 100%);
   width: 100vw;
@@ -492,19 +494,18 @@ hr.dashed {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 60vw;
-  height: 20vw;
-  background: #2b5329;
+  width: 80%;
+  height: 25vw;
   margin: 20px;
 }
 
 .project {
   width: 40%;
   height: 100%;
-  background: #2b5329;
-  border: 1px solid #149414;
+  border: 2px solid #149414;
 }
 
+/* || Contact Section */
 .contact-section {
   display: flex;
   position: relative;

@@ -588,6 +588,8 @@ a {
   @include flicker-slow();
 }
 
+/* || About Me Section */
+
 .about-me {
   position: relative;
   top: 0;
@@ -617,6 +619,8 @@ hr.dashed {
   border-top: 2px dashed $dark-hacker;
 }
 
+/* || Portfolio Section */
+
 .projects-section {
   background: $trans-gradient-black;
   width: 100vw;
@@ -634,18 +638,20 @@ hr.dashed {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 60vw;
-  height: 20vw;
-  background: $dark-dark-hacker;
+  width: 80%;
+  height: 25vw;
+  // background: $dark-dark-hacker;
   margin: 20px;
 }
 
 .project {
   width: 40%;
   height: 100%;
-  background: $dark-dark-hacker;
-  border: 1px solid $hacker;
+  // background: $dark-dark-hacker;
+  border: 2px solid $hacker;
 }
+
+/* || Contact Section */
 
 .contact-section {
   display: flex;
