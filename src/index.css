@@ -139,14 +139,29 @@ h1 {
   -moz-text-size-adjust: none;
        text-size-adjust: none;
 }
+@media (min-width: 600px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
 
 h2 {
   color: #149414;
   font-size: 7vw;
 }
+@media (min-width: 600px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
 
 p {
   color: #0e6b0e;
+}
+@media (min-width: 600px) {
+  p {
+    font-size: 2rem;
+  }
 }
 
 ul {
@@ -354,6 +369,21 @@ img {
   justify-content: center;
   z-index: 6;
 }
+@media (min-width: 600px) {
+  .navbar .menu-items {
+    margin-left: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar .menu-items {
+    margin-left: -30px;
+  }
+}
+@media (min-width: 1400px) {
+  .navbar .menu-items {
+    margin-left: -150px;
+  }
+}
 
 .navbar .menu-items li {
   margin-bottom: 1.2rem;
@@ -478,8 +508,19 @@ img {
   white-space: pre-line;
 }
 
+@media (min-width: 600px) {
+  .about-me-text h2 {
+    font-size: 2rem;
+  }
+}
+
 .about-me-text p {
   font-size: 4vw;
+}
+@media (min-width: 600px) {
+  .about-me-text p {
+    font-size: 1.5rem;
+  }
 }
 
 hr.dashed {
@@ -507,6 +548,11 @@ hr.dashed {
 .projects-section h2 {
   margin-top: 20px;
 }
+@media (min-width: 600px) {
+  .projects-section h2 {
+    font-size: 4rem;
+  }
+}
 
 .projects-section-container {
   display: flex;
@@ -515,6 +561,12 @@ hr.dashed {
   width: 80vw;
   height: 25vw;
   margin: 50px;
+}
+@media (min-width: 600px) {
+  .projects-section-container {
+    margin-top: 50px;
+    height: 30vw;
+  }
 }
 
 .project {
@@ -525,6 +577,12 @@ hr.dashed {
   width: 35vw;
   height: 40vw;
   border: 2px solid #149414;
+}
+@media (min-width: 600px) {
+  .project {
+    width: 40%;
+    height: 100%;
+  }
 }
 
 .preview {
@@ -546,6 +604,11 @@ hr.dashed {
   margin: 1vw;
   font-size: 4vw;
 }
+@media (min-width: 600px) {
+  .preview-text p {
+    font-size: 1.5rem;
+  }
+}
 
 /* || Contact Section */
 .contact-section {
@@ -562,9 +625,26 @@ hr.dashed {
   margin-bottom: -10px;
   scroll-margin-top: 50px;
 }
+@media (min-width: 1400px) {
+  .contact-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 600px;
+  }
+}
 
 .contact-title {
   color: #149414;
+}
+@media (min-width: 1200px) {
+  .contact-title {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 600px) {
+  .contact-title {
+    font-size: 3rem;
+  }
 }
 
 .contact-link {
@@ -577,10 +657,20 @@ hr.dashed {
   margin-bottom: 1em;
   flex-wrap: wrap;
 }
+@media (min-width: 600px) {
+  .contact-link {
+    flex-direction: row;
+  }
+}
 
 .contact-details {
   text-shadow: 2px 2px 1px #2b5329;
   transition: transform 0.3s ease-out;
+}
+@media (min-width: 600px) {
+  .contact-details {
+    text-shadow: 2px 2px 1px #2b5329;
+  }
 }
 
 .btn {
@@ -597,4 +687,9 @@ hr.dashed {
   color: #149414;
   font-size: 5vw;
   margin: 1em;
+}
+@media (min-width: 600px) {
+  .contact-link > a {
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=index.css.map */

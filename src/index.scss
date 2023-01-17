@@ -310,18 +310,27 @@ h1 {
   font-size: 10vw;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  // @media (max-width: 600px) {
-  //   font-size: 10vw;
-  // }
+  //Media Queries
+  @media (min-width: 600px) {
+    font-size: 5rem;
+  }
 }
 
 h2 {
   color: $hacker;
   font-size: 7vw;
+  //Media Queries
+  @media (min-width: 600px) {
+    font-size: 4rem;
+  }
 }
 
 p {
   color: $dark-hacker;
+  //Media Queries
+  @media (min-width: 600px) {
+    font-size: 2rem;
+  }
 }
 
 ul {
@@ -365,6 +374,9 @@ img {
   background: $flicker-green;
   @include flicker();
   z-index: 0;
+  // @media (min-width: 600px) {
+  //   height: 3000px;
+  // }
 }
 
 .background-static {
@@ -519,6 +531,15 @@ img {
   align-items: center;
   justify-content: center;
   z-index: 6;
+  @media (min-width: 600px) {
+    margin-left: 0px;
+  }
+  @media (min-width: 1200px) {
+    margin-left: -30px;
+  }
+  @media (min-width: 1400px) {
+    margin-left: -150px;
+  }
 }
 
 .navbar .menu-items li {
@@ -645,12 +666,19 @@ img {
   // background: white;
 }
 
-// .about-me-text h2 {
-//   font-size: 2rem;
-// }
+.about-me-text h2 {
+  //Media Queries
+  @media (min-width: 600px) {
+    font-size: 2rem;
+  }
+}
 
 .about-me-text  p {
   font-size: 4vw;
+  //Media Queries
+  @media (min-width: 600px) {
+    font-size: 1.5rem;
+  }
 }
 
 hr.dashed {
@@ -676,6 +704,10 @@ hr.dashed {
 
 .projects-section h2 {
   margin-top: 20px;
+  //Media Queries
+  @media (min-width: 600px) {
+    font-size: 4rem;
+  }
 }
 
 .projects-section-container {
@@ -684,8 +716,12 @@ hr.dashed {
   align-items: center;
   width: 80vw;
   height: 25vw;
-  // background: $dark-dark-hacker;
   margin: 50px;
+  //Media Queries
+  @media (min-width: 600px) {
+    margin-top: 50px;
+    height: 30vw;
+  }
 }
 
 .project {
@@ -697,6 +733,11 @@ hr.dashed {
   height: 40vw;
   border: 2px solid $hacker;
   // white-space: nowrap;
+  //Media Queries
+  @media (min-width: 600px) {
+    width: 40%;
+    height: 100%;
+  }
 }
 
 //Portfolio previews css
@@ -716,6 +757,10 @@ hr.dashed {
   color:$dark-hacker;
   margin: 1vw;
   font-size: 4vw;
+  //Media Queries
+  @media (min-width: 600px) {
+    font-size: 1.5rem;
+  }
 }
 
 /* || Contact Section */
@@ -733,11 +778,23 @@ hr.dashed {
   background: $black;
   margin-bottom: -10px;
   scroll-margin-top: 50px;
+  //Media Queries
+  @media (min-width: 1400px) {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 600px;
+  }
 }
 
 .contact-title {
   color: $hacker;
-
+  //Media Queries
+  @media (min-width: 1200px) {
+    font-size: 4rem;
+  }
+  @media (min-width: 600px) {
+    font-size: 3rem;
+  }
 }
 
 .contact-link {
@@ -749,11 +806,19 @@ hr.dashed {
   margin-top: 1em;
   margin-bottom: 1em;
   flex-wrap: wrap;
+  //Media Queries
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
 }
 
 .contact-details {
   text-shadow: 2px 2px 1px $dark-dark-hacker;
   transition: transform 0.3s ease-out;
+  //Media Queries
+  @media (min-width: 600px) {
+    text-shadow: 2px 2px 1px $dark-dark-hacker;
+  }
 }
 
 .btn {
@@ -770,4 +835,8 @@ hr.dashed {
   color: $hacker;
   font-size: 5vw;
   margin: 1em;
+  //Media Queries
+  @media (min-width: 600px) {
+    font-size: 2rem;
+  }
 }
