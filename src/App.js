@@ -1,5 +1,7 @@
 import "./App.css";
 import "./index.css";
+import logo from "./JavascriptCalc.png";
+import pomodoroClock from "./Pomodoro Clock.png";
 
 // const divHeight = document.getElementsByClassName("container").clientHeight;
 // document.getElementsByClassName("background").style.height = divHeight+"px";
@@ -79,8 +81,14 @@ function App() {
         <section className="projects-section" id="portfolio">
           <h2>Portfolio</h2>
           <div className="projects-section-container">
-            <div className="project"></div>
-            <div className="project"></div>
+            <div className="project">
+              <img id="jscalc" src={logo} alt="Javascript Calculator"/>
+              <span><a href="https://mike-is-coding.github.io/Javascript-Calculator/">JavaScript Calculator</a></span>
+            </div>
+            <div className="project">
+              <img src={pomodoroClock} alt="Pomodoro Clock"/>
+              <span><a href="https://mike-is-coding.github.io/25-Clock/">Pomodoro Clock</a></span>
+            </div>
           </div>
           <div className="projects-section-container">
             <div className="project"></div>
@@ -105,8 +113,9 @@ function App() {
             </a>
             <a
               id="myemail"
-              href="miguel.fierro.750@gmail.com"
+              href="mailto: miguel.fierro.750@gmail.com"
               target="_blank"
+              rel="noreferrer"
               className="btn contact-details"
             >
               <i className="fas fa-at"></i> Send an Email
