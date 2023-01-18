@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.08ebf69b.css",
-    "main.js": "/static/js/main.1044bb4c.js",
+    "main.js": "/static/js/main.6286f249.js",
     "static/js/787.583385f9.chunk.js": "/static/js/787.583385f9.chunk.js",
     "static/media/Pomodoro Clock.png": "/static/media/Pomodoro Clock.e696763956035f5ae46b.png",
     "static/media/JavascriptCalc.png": "/static/media/JavascriptCalc.d3b529a83af2df16f48c.png",
     "index.html": "/index.html",
     "main.08ebf69b.css.map": "/static/css/main.08ebf69b.css.map",
-    "main.1044bb4c.js.map": "/static/js/main.1044bb4c.js.map",
+    "main.6286f249.js.map": "/static/js/main.6286f249.js.map",
     "787.583385f9.chunk.js.map": "/static/js/787.583385f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.08ebf69b.css",
-    "static/js/main.1044bb4c.js"
+    "static/js/main.6286f249.js"
   ]
 }
