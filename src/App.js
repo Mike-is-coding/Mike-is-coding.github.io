@@ -1,5 +1,6 @@
 import "./App.css";
 import "./index.css";
+import Favicon from "react-favicon";
 import logo from "./JavascriptCalc.png";
 import pomodoroClock from "./Pomodoro Clock.png";
 
@@ -9,6 +10,7 @@ import pomodoroClock from "./Pomodoro Clock.png";
 function App() {
   return (
     <>
+      <Favicon url="https://i.imgur.com/QrUsLs3.png"></Favicon>
       <div className="background"></div>
       <div className="background-static"></div>
       <div className="background-static2"></div>
