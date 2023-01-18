@@ -58,21 +58,21 @@
 @keyframes typing {
   from {
     width: 0;
-    border-right: 10px solid #149414;
+    border-right: 10px solid #faebd7;
   }
   to {
     width: 100%;
-    border-right: 0px solid #149414;
+    border-right: 0px solid #faebd7;
   }
 }
 @-webkit-keyframes typing {
   from {
     width: 0;
-    border-right: 10px solid #149414;
+    border-right: 10px solid #faebd7;
   }
   to {
     width: 100%;
-    border-right: 0px solid #149414;
+    border-right: 0px solid #faebd7;
   }
 }
 @keyframes fadeIn {
@@ -121,13 +121,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  background: #000000;
+  background: #181719;
 }
 
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #149414 #000000;
+  scrollbar-color: #faebd7 #181719;
 }
 @media (min-width: 1400px) {
   * {
@@ -146,13 +146,17 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: #000000;
+  background: #181719;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #149414;
+  background-color: #faebd7;
   border-radius: 20px;
-  border: 3px solid #000000;
+  border: 3px solid #181719;
+}
+
+.red {
+  color: #dc143c;
 }
 
 code {
@@ -177,7 +181,7 @@ h1 {
 }
 
 h2 {
-  color: #149414;
+  color: #faebd7;
   font-size: 7vw;
 }
 @media (min-width: 600px) {
@@ -187,7 +191,7 @@ h2 {
 }
 
 p {
-  color: #0e6b0e;
+  color: #dc143c;
 }
 @media (min-width: 600px) {
   p {
@@ -214,6 +218,7 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  box-shadow: 10px 10px #181719;
 }
 
 .fab {
@@ -235,66 +240,6 @@ img {
 }
 
 /* Specific css */
-.background {
-  height: 2000px;
-  width: 100vw;
-  background: linear-gradient(90deg, #2b5329 0%, #000000 15%, #000000 85%, #2b5329 100%);
-  -webkit-animation: flickerAnimation 0.05s infinite;
-  animation: flickerAnimation 0.05s infinite;
-  z-index: 0;
-}
-@media (min-width: 2000px) {
-  .background {
-    height: 3500px;
-  }
-}
-
-.background-static {
-  width: 100vw;
-  height: 15px;
-  background: linear-gradient(90deg, #2b5329 0%, #000000 15%, #000000 85%, #2b5329 100%);
-  position: absolute;
-  top: 0;
-  -webkit-animation: flicker-static 4s infinite;
-  animation: flicker-static 4s infinite;
-  z-index: 2;
-}
-@media (min-width: 2000px) {
-  .background-static {
-    -webkit-animation: flicker-static-long 4s infinite;
-    animation: flicker-static-long 4s infinite;
-  }
-}
-
-.background-static2 {
-  width: 100vw;
-  height: 15px;
-  background: linear-gradient(90deg, #2b5329 0%, #000000 15%, #000000 85%, #2b5329 100%);
-  position: absolute;
-  top: 0;
-  -webkit-animation: flicker-static 4s infinite;
-  -webkit-animation-delay: 3s;
-  -moz-animation: flicker-static 4s infinite;
-  -moz-animation-delay: 3s;
-  -o-animation: flicker-static 4s infinite;
-  -o-animation-delay: 3s;
-  animation: flicker-static 4s infinite;
-  animation-delay: 3s;
-  z-index: 2;
-}
-@media (min-width: 2000px) {
-  .background-static2 {
-    -webkit-animation: flicker-static-long 4s infinite;
-    -webkit-animation-delay: 3s;
-    -moz-animation: flicker-static-long 4s infinite;
-    -moz-animation-delay: 3s;
-    -o-animation: flicker-static-long 4s infinite;
-    -o-animation-delay: 3s;
-    animation: flicker-static-long 4s infinite;
-    animation-delay: 3s;
-  }
-}
-
 .container {
   width: 100vw;
   height: -webkit-fit-content;
@@ -312,7 +257,7 @@ img {
 
 /* || Navbar */
 .nav-box {
-  background: #000000;
+  background: #181719;
   width: 100%;
   height: 50px;
   position: fixed;
@@ -334,7 +279,7 @@ img {
 .navbar {
   width: 100%;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
-  background: #000000;
+  background: #181719;
 }
 
 .nav-container {
@@ -354,7 +299,7 @@ img {
 
 .navbar .nav-container a {
   text-decoration: none;
-  color: #149414;
+  color: #dc143c;
   font-weight: 500;
   font-size: 1.2rem;
   padding: 0.7rem;
@@ -367,6 +312,7 @@ img {
 
 .navbar .nav-container a:hover {
   font-weight: bolder;
+  color: #faebd7;
 }
 
 .nav-container {
@@ -419,7 +365,7 @@ img {
   height: 4px;
   width: 100%;
   border-radius: 10px;
-  background: #0e6b0e;
+  background: #faebd7;
 }
 
 .nav-container .hamburger-lines .line1 {
@@ -447,7 +393,7 @@ img {
   margin-left: 1em;
   transition: transform 0.5s ease-in-out;
   text-align: center;
-  color: #149414;
+  color: #dc143c;
   align-items: center;
   justify-content: center;
   z-index: 6;
@@ -517,7 +463,7 @@ img {
   height: 100vh;
   position: relative;
   overflow-x: clip;
-  background: rgba(0, 0, 0, 0.4);
+  background: radial-gradient(#3a3d40, #181719);
   margin-top: -20px;
   scroll-margin-top: 50px;
 }
@@ -527,7 +473,7 @@ img {
 }
 
 .welcome-text {
-  color: #149414;
+  color: #faebd7;
   text-align: center;
   overflow: hidden;
   white-space: nowrap;
@@ -546,7 +492,7 @@ img {
   font-weight: 200;
   font-style: italic;
   margin-top: 0px;
-  color: #0e6b0e;
+  color: #dc143c;
   -webkit-animation: typing 1s steps(30, end);
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-delay: 2.5s;
@@ -564,7 +510,7 @@ img {
 .scroll-cont {
   position: absolute;
   bottom: 0px;
-  color: #0e6b0e;
+  color: #dc143c;
 }
 
 .scroll-text {
@@ -586,7 +532,7 @@ img {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background: rgba(0, 0, 0, 0.4);
+  background: #181719;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -615,6 +561,7 @@ img {
 
 .about-me-text p {
   font-size: 4vw;
+  color: #faebd7;
 }
 @media (min-width: 600px) {
   .about-me-text p {
@@ -629,12 +576,12 @@ img {
 
 hr.dashed {
   border: 0;
-  border-top: 2px dashed #0e6b0e;
+  border-top: 2px dashed #dc143c;
 }
 
 /* || Portfolio Section */
 .projects-section {
-  background: linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0.4) 100%);
+  background: #3a3d40;
   width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -685,7 +632,7 @@ hr.dashed {
   flex-direction: column;
   width: 35vw;
   height: 40vw;
-  border: 2px solid #149414;
+  border: 5px solid #faebd7;
 }
 @media (min-width: 600px) {
   .project {
@@ -709,7 +656,7 @@ hr.dashed {
 }
 
 .preview-text p {
-  color: #0e6b0e;
+  color: #dc143c;
   margin: 1vw;
   font-size: 4vw;
 }
@@ -735,20 +682,19 @@ hr.dashed {
   text-align: center;
   width: 100vw;
   height: 500px;
-  background: #000000;
+  background: linear-gradient(to top, #181719 0%, #3a3d40 100%);
   margin-bottom: -10px;
   scroll-margin-top: 50px;
 }
 @media (min-width: 1400px) {
   .contact-section {
-    margin-top: 100px;
     margin-bottom: 100px;
     height: 600px;
   }
 }
 
 .contact-title {
-  color: #149414;
+  color: #faebd7;
 }
 @media (min-width: 1200px) {
   .contact-title {
@@ -783,7 +729,7 @@ hr.dashed {
 }
 @media (min-width: 600px) {
   .contact-details {
-    text-shadow: 2px 2px 1px #2b5329;
+    text-shadow: 2px 2px 1px #181719;
   }
 }
 
@@ -798,7 +744,7 @@ hr.dashed {
 }
 
 .contact-link > a {
-  color: #149414;
+  color: #faebd7;
   font-size: 5vw;
   margin: 1em;
 }

@@ -1,21 +1,22 @@
 /* Variables */
-$dark-hacker: #0e6b0e;
 $dark-dark-hacker: #2b5329;
-$flicker-green: linear-gradient(90deg, #2b5329 0%, #000000 15%, #000000 85%, #2b5329 100%);
+$flicker-green: linear-gradient(90deg, #2b5329 0%, #000000 10%, #000000 90%, #2b5329 100%);
 $flicker-green-static: radial-gradient(circle, #000000 0%, #000000 60%, #149414 100%);
-$hacker: #149414;
+$red: #dc143c;
+$white: #faebd7;
 $light-hacker: #649568;
-$black: #000000;
-$trans-black: rgb(0, 0, 0, 0.4);
-$trans-gradient-black: linear-gradient(to top, #000000 0%, rgb(0, 0, 0, 0.4) 100%);
+$black: #181719;
+$gray: #3a3d40;
+$trans-black: rgb(59, 60, 54, 0.4);
+$trans-gradient-black: linear-gradient(to top, #181719 0%, #3a3d40 100%);
 
 
 /* Mixins */
 @mixin flicker{
-  -webkit-animation: flickerAnimation 0.05s infinite;
-  -moz-animation: flickerAnimation 0.05s infinite;
-  -o-animation: flickerAnimation 0.05s infinite;
-  animation: flickerAnimation 0.05s infinite;
+  -webkit-animation: flickerAnimation 5s infinite;
+  -moz-animation: flickerAnimation 5s infinite;
+  -o-animation: flickerAnimation 5s infinite;
+  animation: flickerAnimation 5s infinite;
 }
 
 @mixin flicker-slow {
@@ -156,41 +157,41 @@ $trans-gradient-black: linear-gradient(to top, #000000 0%, rgb(0, 0, 0, 0.4) 100
 @keyframes typing {
   from {
     width: 0;
-    border-right: 10px solid $hacker;
+    border-right: 10px solid $white;
   }
   to {
     width: 100%;
-    border-right: 0px solid $hacker;
+    border-right: 0px solid $white;
   }
 }
 @-o-keyframes typing {
   from {
     width: 0;
-    border-right: 10px solid $hacker;
+    border-right: 10px solid $white;
   }
   to {
     width: 100%;
-    border-right: 0px solid $hacker;
+    border-right: 0px solid $white;
   }
 }
 @-moz-keyframes typing {
   from {
     width: 0;
-    border-right: 10px solid $hacker;
+    border-right: 10px solid $white;
   }
   to {
     width: 100%;
-    border-right: 0px solid $hacker;
+    border-right: 0px solid $white;
   }
 }
 @-webkit-keyframes typing {
   from {
     width: 0;
-    border-right: 10px solid $hacker;
+    border-right: 10px solid $white;
   }
   to {
     width: 100%;
-    border-right: 0px solid $hacker;
+    border-right: 0px solid $white;
   }
 }
 
@@ -288,7 +289,7 @@ body {
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: $hacker $black;
+  scrollbar-color: $white $black;
   @media (min-width: 1400px) {
     scrollbar-width: auto;
   }
@@ -307,11 +308,14 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: $hacker;
+  background-color: $white;
   border-radius: 20px;
   border: 3px solid $black;
 }
 
+.red {
+  color: $red;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -332,7 +336,7 @@ h1 {
 }
 
 h2 {
-  color: $hacker;
+  color: $white;
   font-size: 7vw;
   //Media Queries
   @media (min-width: 600px) {
@@ -341,7 +345,7 @@ h2 {
 }
 
 p {
-  color: $dark-hacker;
+  color: $red;
   //Media Queries
   @media (min-width: 600px) {
     font-size: 2rem;
@@ -364,6 +368,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  box-shadow: 10px 10px $black;
 }
 
 .fab {
@@ -386,52 +391,52 @@ img {
 
 /* Specific css */
 
-.background {
-  height: 2000px;
-  width: 100vw;
-  background: $flicker-green;
-  @include flicker();
-  z-index: 0;
-  @media (min-width: 2000px) {
-    height: 3500px;
-  }
-}
+// .background {
+//   height: 2000px;
+//   width: 100vw;
+//   background: $flicker-green;
+//   // @include flicker();
+//   z-index: 0;
+//   @media (min-width: 2000px) {
+//     height: 3500px;
+//   }
+// }
 
-.background-static {
-  width: 100vw;
-  height: 15px;
-  background: $flicker-green;
-  position: absolute;
-  top: 0;
-  @include flicker-static();
-  z-index: 2;
-  @media (min-width: 2000px) {
-    -webkit-animation: flicker-static-long 4s infinite;
-    -moz-animation: flicker-static-long 4s infinite;
-    -o-animation: flicker-static-long 4s infinite;
-    animation: flicker-static-long 4s infinite;
-  }
-}
+// .background-static {
+//   width: 100vw;
+//   height: 15px;
+//   background: $flicker-green;
+//   position: absolute;
+//   top: 0;
+//   @include flicker-static();
+//   z-index: 2;
+//   @media (min-width: 2000px) {
+//     -webkit-animation: flicker-static-long 4s infinite;
+//     -moz-animation: flicker-static-long 4s infinite;
+//     -o-animation: flicker-static-long 4s infinite;
+//     animation: flicker-static-long 4s infinite;
+//   }
+// }
 
-.background-static2 {
-  width: 100vw;
-  height: 15px;
-  background: $flicker-green;
-  position: absolute;
-  top: 0;
-  @include flicker-static-delayed();
-  z-index: 2;
-  @media (min-width: 2000px) {
-    -webkit-animation: flicker-static-long 4s infinite;
-    -webkit-animation-delay: 3s;
-    -moz-animation: flicker-static-long 4s infinite;
-    -moz-animation-delay: 3s;
-    -o-animation: flicker-static-long 4s infinite;
-    -o-animation-delay: 3s;
-    animation: flicker-static-long 4s infinite;
-    animation-delay: 3s;
-  }
-}
+// .background-static2 {
+//   width: 100vw;
+//   height: 15px;
+//   background: $flicker-green;
+//   position: absolute;
+//   top: 0;
+//   @include flicker-static-delayed();
+//   z-index: 2;
+//   @media (min-width: 2000px) {
+//     -webkit-animation: flicker-static-long 4s infinite;
+//     -webkit-animation-delay: 3s;
+//     -moz-animation: flicker-static-long 4s infinite;
+//     -moz-animation-delay: 3s;
+//     -o-animation: flicker-static-long 4s infinite;
+//     -o-animation-delay: 3s;
+//     animation: flicker-static-long 4s infinite;
+//     animation-delay: 3s;
+//   }
+// }
 
 .container {
   width: 100vw;
@@ -489,7 +494,7 @@ img {
 
 .navbar .nav-container a {
   text-decoration: none;
-  color: $hacker;
+  color: $red;
   font-weight: 500;
   font-size: 1.2rem;
   padding: 0.7rem;
@@ -500,6 +505,7 @@ img {
 
 .navbar .nav-container a:hover{
     font-weight: bolder;
+    color: $white;
 }
 
 .nav-container {
@@ -548,7 +554,7 @@ img {
   height: 4px;
   width: 100%;
   border-radius: 10px;
-  background: $dark-hacker;
+  background: $white;
 }
 
 .nav-container .hamburger-lines .line1 {
@@ -576,8 +582,7 @@ img {
   margin-left: 1em;
   transition: transform 0.5s ease-in-out;
   text-align: center;
-  // background: $black;
-  color: $hacker;
+  color: $red;
   align-items: center;
   justify-content: center;
   z-index: 6;
@@ -640,7 +645,7 @@ img {
   height: 100vh;
   position: relative;
   overflow-x: clip;
-  background: $trans-black;
+  background: radial-gradient(#3a3d40, #181719);
   margin-top: -20px;
   scroll-margin-top: 50px;
 }
@@ -650,7 +655,7 @@ img {
 }
 
 .welcome-text {
-  color: $hacker;
+  color: $white;
   text-align: center;
   overflow: hidden;
   white-space: nowrap;
@@ -669,7 +674,7 @@ img {
   font-weight: 200;
   font-style: italic;
   margin-top: 0px;
-  color: $dark-hacker;
+  color: $red;
   -webkit-animation: typing 1s steps(30, end);
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-delay: 2.5s;
@@ -688,7 +693,7 @@ img {
   position: absolute;
   bottom: 0px;
   // margin-top: 0px;
-  color: $dark-hacker;
+  color: $red;
 }
 
 .scroll-text {
@@ -706,7 +711,7 @@ img {
   top: 0;
   width: 100%;
   height: fit-content;
-  background: $trans-black;
+  background: $black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -735,6 +740,7 @@ img {
 
 .about-me-text  p {
   font-size: 4vw;
+  color: $white;
   //Media Queries
   @media (min-width: 600px) {
     font-size: 1.5rem;
@@ -746,13 +752,13 @@ img {
 
 hr.dashed {
   border: 0;
-  border-top: 2px dashed $dark-hacker;
+  border-top: 2px dashed $red;
 }
 
 /* || Portfolio Section */
 
 .projects-section {
-  background: $trans-gradient-black;
+  background: $gray;
   width: 100vw;
   height: fit-content;
   display: flex;
@@ -797,7 +803,7 @@ hr.dashed {
   flex-direction: column;
   width: 35vw;
   height: 40vw;
-  border: 2px solid $hacker;
+  border: 5px solid $white;
   // white-space: nowrap;
   //Media Queries
   @media (min-width: 600px) {
@@ -820,7 +826,7 @@ hr.dashed {
 }
 
 .preview-text p {
-  color:$dark-hacker;
+  color:$red;
   margin: 1vw;
   font-size: 4vw;
   //Media Queries
@@ -844,19 +850,19 @@ hr.dashed {
   text-align: center;
   width: 100vw;
   height: 500px;
-  background: $black;
+  background: $trans-gradient-black;
   margin-bottom: -10px;
   scroll-margin-top: 50px;
   //Media Queries
   @media (min-width: 1400px) {
-    margin-top: 100px;
+    // margin-top: 100px;
     margin-bottom: 100px;
     height: 600px;
   }
 }
 
 .contact-title {
-  color: $hacker;
+  color: $white;
   //Media Queries
   @media (min-width: 1200px) {
     font-size: 4rem;
@@ -886,7 +892,7 @@ hr.dashed {
   transition: transform 0.3s ease-out;
   //Media Queries
   @media (min-width: 600px) {
-    text-shadow: 2px 2px 1px $dark-dark-hacker;
+    text-shadow: 2px 2px 1px $black;
   }
 }
 
@@ -901,7 +907,7 @@ hr.dashed {
 }
 
 .contact-link > a {
-  color: $hacker;
+  color: $white;
   font-size: 5vw;
   margin: 1em;
   //Media Queries
