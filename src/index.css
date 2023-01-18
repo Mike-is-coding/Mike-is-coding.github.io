@@ -218,7 +218,12 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  box-shadow: 10px 10px #181719;
+  box-shadow: 2px 2px #181719;
+}
+@media (min-width: 1400px) {
+  img {
+    box-shadow: 10px 10px #181719;
+  }
 }
 
 .fab {
