@@ -730,7 +730,7 @@ hr.dashed {
 }
 
 .contact-details {
-  text-shadow: 2px 2px 1px #2b5329;
+  text-shadow: 2px 2px 1px #181719;
   transition: transform 0.3s ease-out;
 }
 @media (min-width: 600px) {

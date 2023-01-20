@@ -395,53 +395,6 @@ img {
 
 /* Specific css */
 
-// .background {
-//   height: 2000px;
-//   width: 100vw;
-//   background: $flicker-green;
-//   // @include flicker();
-//   z-index: 0;
-//   @media (min-width: 2000px) {
-//     height: 3500px;
-//   }
-// }
-
-// .background-static {
-//   width: 100vw;
-//   height: 15px;
-//   background: $flicker-green;
-//   position: absolute;
-//   top: 0;
-//   @include flicker-static();
-//   z-index: 2;
-//   @media (min-width: 2000px) {
-//     -webkit-animation: flicker-static-long 4s infinite;
-//     -moz-animation: flicker-static-long 4s infinite;
-//     -o-animation: flicker-static-long 4s infinite;
-//     animation: flicker-static-long 4s infinite;
-//   }
-// }
-
-// .background-static2 {
-//   width: 100vw;
-//   height: 15px;
-//   background: $flicker-green;
-//   position: absolute;
-//   top: 0;
-//   @include flicker-static-delayed();
-//   z-index: 2;
-//   @media (min-width: 2000px) {
-//     -webkit-animation: flicker-static-long 4s infinite;
-//     -webkit-animation-delay: 3s;
-//     -moz-animation: flicker-static-long 4s infinite;
-//     -moz-animation-delay: 3s;
-//     -o-animation: flicker-static-long 4s infinite;
-//     -o-animation-delay: 3s;
-//     animation: flicker-static-long 4s infinite;
-//     animation-delay: 3s;
-//   }
-// }
-
 .container {
   width: 100vw;
   height: fit-content;
@@ -891,7 +844,7 @@ hr.dashed {
 }
 
 .contact-details {
-  text-shadow: 2px 2px 1px $dark-dark-hacker;
+  text-shadow: 2px 2px 1px $black;
   transition: transform 0.3s ease-out;
   //Media Queries
   @media (min-width: 600px) {

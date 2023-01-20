@@ -75,13 +75,13 @@ function App() {
           <div className="about-me-container">
             <div className="about-me-text">
               <h2>
-              <span className="red">Hello my name is Miguel Fierro</span>
+                <span className="red">Hello my name is Miguel Fierro</span>
               </h2>
               <hr className="dashed" />
               <p>
-                
-                  <span className="red">I</span> am an entry-level front-end developer with a passion for creating visually appealing and user-friendly websites and web applications. I have a solid understanding of HTML, CSS, JavaScript, and jQuery and am familiar with responsive design and popular front-end frameworks such as Reactjs. I am a quick learner and am always eager to expand my skills and knowledge in the field. I am eager to learn and improve my skills, and dedicated to providing the best user experience.
-                
+                {
+                  "I am an entry-level front-end developer with a passion for creating visually appealing and user-friendly websites and web applications. I have a solid understanding of HTML, CSS, JavaScript, and jQuery and am familiar with responsive design and popular front-end frameworks such as Reactjs. I have also worked with some Python and Bootstrap in the past. I am a quick learner and am always eager to expand my skills and knowledge in the field. I am eager to learn and improve my skills, and dedicated to providing the best user experience."
+                }
               </p>
             </div>
           </div>
@@ -98,7 +98,12 @@ function App() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img className="hover" id="jscalc" src={logo} alt="Javascript Calculator" />
+                  <img
+                    className="hover"
+                    id="jscalc"
+                    src={logo}
+                    alt="Javascript Calculator"
+                  />
                 </a>
               </div>
               <div className="preview-text">
@@ -114,15 +119,21 @@ function App() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img className="hover" id="pomodoroClock" src={pomodoroClock} alt="Pomodoro Clock" />
+                  <img
+                    className="hover"
+                    id="pomodoroClock"
+                    src={pomodoroClock}
+                    alt="Pomodoro Clock"
+                  />
                 </a>
               </div>
               <div className="preview-text">
-                <p><span>Pomodoro Clock</span></p>
+                <p>
+                  <span>Pomodoro Clock</span>
+                </p>
               </div>
             </div>
           </div>
-          
         </section>
 
         {/* || Contact Section */}
@@ -138,7 +149,10 @@ function App() {
               className="btn contact-details hover"
               rel="noreferrer"
             >
-              <i className="fab fa-github"></i> GitHub
+              <span className="red">
+                <i className="fab fa-github"></i>
+              </span>{" "}
+              GitHub
             </a>
             <a
               id="myemail"
@@ -147,7 +161,10 @@ function App() {
               rel="noreferrer"
               className="btn contact-details hover"
             >
-              <i className="fas fa-at"></i> Send an Email
+              <span className="red">
+                <i className="fas fa-at"></i>
+              </span>{" "}
+              Send an Email
             </a>
             <a
               id="my-linkedin"
@@ -156,7 +173,10 @@ function App() {
               className="btn contact-details hover"
               rel="noreferrer"
             >
-              <i className="fab fa-linkedin"></i> LinkedIn
+              <span className="red">
+                <i className="fab fa-linkedin"></i>
+              </span>{" "}
+              LinkedIn
             </a>
           </div>
         </section>
