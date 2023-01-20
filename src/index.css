@@ -23,38 +23,6 @@
     opacity: 1;
   }
 }
-@keyframes flicker-static {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: 2000px;
-  }
-}
-@-webkit-keyframes flicker-static {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: 2000px;
-  }
-}
-@keyframes flicker-static-long {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: 3600px;
-  }
-}
-@-webkit-keyframes flicker-static-long {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: 3400px;
-  }
-}
 @keyframes typing {
   from {
     width: 0;
@@ -218,8 +186,14 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 4vw;
   box-shadow: 2px 2px #181719;
   transition: transform 0.3s ease-out;
+}
+@media (min-width: 600px) {
+  img {
+    border-radius: 20px;
+  }
 }
 @media (min-width: 1400px) {
   img {
@@ -499,6 +473,7 @@ img {
   font-style: italic;
   margin-top: 0px;
   color: #dc143c;
+  font-size: 5vw;
   -webkit-animation: typing 1s steps(30, end);
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-delay: 2.5s;
@@ -511,6 +486,16 @@ img {
   animation: typing 1s steps(30, end);
   animation-fill-mode: forwards;
   animation-delay: 2.5s;
+}
+@media (min-width: 600px) {
+  .welcome-container2 > p {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 2000px) {
+  .welcome-container2 > p {
+    font-size: 2.5rem;
+  }
 }
 
 .scroll-cont {
@@ -544,6 +529,18 @@ img {
   align-items: center;
   z-index: 5;
   scroll-margin-top: 50px;
+  margin-bottom: 8vw;
+}
+@media (min-width: 600px) {
+  .about-me {
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+}
+@media (min-width: 2000px) {
+  .about-me {
+    margin-bottom: 50px;
+  }
 }
 
 .about-me-text {
@@ -587,7 +584,7 @@ hr.dashed {
 
 /* || Portfolio Section */
 .projects-section {
-  background: #3a3d40;
+  background: linear-gradient(to top, #3a3d40, #181719);
   width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;

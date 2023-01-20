@@ -9,6 +9,7 @@ $black: #181719;
 $gray: #3a3d40;
 $trans-black: rgb(59, 60, 54, 0.4);
 $trans-gradient-black: linear-gradient(to top, #181719 0%, #3a3d40 100%);
+$gradient-gray-black: linear-gradient(to top, #3a3d40, #181719);
 
 
 /* Mixins */
@@ -24,24 +25,6 @@ $trans-gradient-black: linear-gradient(to top, #181719 0%, #3a3d40 100%);
   -moz-animation: flickerAnimation 5s infinite;
   -o-animation: flickerAnimation 5s infinite;
   animation: flickerAnimation 5s infinite;
-}
-
-@mixin flicker-static {
-  -webkit-animation: flicker-static 4s infinite;
-  -moz-animation: flicker-static 4s infinite;
-  -o-animation: flicker-static 4s infinite;
-  animation: flicker-static 4s infinite;
-}
-
-@mixin flicker-static-delayed {
-  -webkit-animation: flicker-static 4s infinite;
-  -webkit-animation-delay: 3s;
-  -moz-animation: flicker-static 4s infinite;
-  -moz-animation-delay: 3s;
-  -o-animation: flicker-static 4s infinite;
-  -o-animation-delay: 3s;
-  animation: flicker-static 4s infinite;
-  animation-delay: 3s;
 }
 
 /* Animation keyframes */
@@ -87,70 +70,6 @@ $trans-gradient-black: linear-gradient(to top, #181719 0%, #3a3d40 100%);
   }
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes flicker-static {
-  0% {
-    top: 0;
-  } 100% {
-    top: 2000px;
-  }
-}
-
-@-o-keyframes flicker-static {
-  0% {
-    top: 0;
-  } 100% {
-    top: 2000px;
-  }
-}
-
-@-moz-keyframes flicker-static {
-  0% {
-    top: 0;
-  } 100% {
-    top: 2000px;
-  }
-}
-
-@-webkit-keyframes flicker-static {
-  0% {
-    top: 0;
-  } 100% {
-    top: 2000px;
-  }
-}
-
-@keyframes flicker-static-long {
-  0% {
-    top: 0;
-  } 100% {
-    top: 3600px;
-  }
-}
-
-@-o-keyframes flicker-static-long {
-  0% {
-    top: 0;
-  } 100% {
-    top: 3600px;
-  }
-}
-
-@-moz-keyframes flicker-static-long {
-  0% {
-    top: 0;
-  } 100% {
-    top: 3600px;
-  }
-}
-
-@-webkit-keyframes flicker-static-long {
-  0% {
-    top: 0;
-  } 100% {
-    top: 3400px;
   }
 }
 
@@ -368,8 +287,12 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 4vw;
   box-shadow: 2px 2px $black;
   transition: transform 0.3s ease-out;
+  @media (min-width: 600px) {
+    border-radius: 20px;
+  }
   @media (min-width: 1400px) {
     box-shadow: 10px 10px $black;
   }
@@ -632,6 +555,7 @@ img {
   font-style: italic;
   margin-top: 0px;
   color: $red;
+  font-size: 5vw;
   -webkit-animation: typing 1s steps(30, end);
   -webkit-animation-fill-mode: forwards;
   -webkit-animation-delay: 2.5s;
@@ -644,6 +568,12 @@ img {
   animation: typing 1s steps(30, end);
   animation-fill-mode: forwards;
   animation-delay: 2.5s;
+  @media (min-width: 600px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 2000px) {
+    font-size: 2.5rem;
+  }
 }
 
 .scroll-cont {
@@ -674,6 +604,14 @@ img {
   align-items: center;
   z-index: 5;
   scroll-margin-top: 50px;
+  margin-bottom: 8vw;
+  @media (min-width: 600px) {
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+  @media (min-width: 2000px) {
+    margin-bottom: 50px;
+  }
 }
 
 .about-me-text {
@@ -715,7 +653,7 @@ hr.dashed {
 /* || Portfolio Section */
 
 .projects-section {
-  background: $gray;
+  background: $gradient-gray-black;
   width: 100vw;
   height: fit-content;
   display: flex;
