@@ -98,7 +98,7 @@ function App() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img id="jscalc" src={logo} alt="Javascript Calculator" />
+                  <img className="hover" id="jscalc" src={logo} alt="Javascript Calculator" />
                 </a>
               </div>
               <div className="preview-text">
@@ -114,7 +114,7 @@ function App() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={pomodoroClock} alt="Pomodoro Clock" />
+                  <img className="hover" id="pomodoroClock" src={pomodoroClock} alt="Pomodoro Clock" />
                 </a>
               </div>
               <div className="preview-text">
@@ -122,10 +122,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="projects-section-container">
-            <div className="project"></div>
-            {/* <div className="project"></div> */}
-          </div>
+          
         </section>
 
         {/* || Contact Section */}
@@ -138,7 +135,7 @@ function App() {
               id="profile-link"
               href="https://github.com/Mike-is-coding"
               target="_blank"
-              className="btn contact-details"
+              className="btn contact-details hover"
               rel="noreferrer"
             >
               <i className="fab fa-github"></i> GitHub
@@ -148,7 +145,7 @@ function App() {
               href="mailto: miguel.fierro.750@gmail.com"
               target="_blank"
               rel="noreferrer"
-              className="btn contact-details"
+              className="btn contact-details hover"
             >
               <i className="fas fa-at"></i> Send an Email
             </a>
@@ -156,7 +153,7 @@ function App() {
               id="my-linkedin"
               href="https://www.linkedin.com/in/miguel-fierro-04b23a252/"
               target="_blank"
-              className="btn contact-details"
+              className="btn contact-details hover"
               rel="noreferrer"
             >
               <i className="fab fa-linkedin"></i> LinkedIn

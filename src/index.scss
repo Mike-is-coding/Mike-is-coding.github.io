@@ -369,6 +369,7 @@ img {
   height: 100%;
   object-fit: cover;
   box-shadow: 2px 2px $black;
+  transition: transform 0.3s ease-out;
   @media (min-width: 1400px) {
     box-shadow: 10px 10px $black;
   }
@@ -904,7 +905,7 @@ hr.dashed {
   border-radius: 2px;
 }
 
-.contact-details:hover {
+.hover:hover {
   transform: translateY(8px);
 }
 
