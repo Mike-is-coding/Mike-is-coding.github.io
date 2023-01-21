@@ -91,6 +91,13 @@ body {
   overflow-x: hidden;
   background: #181719;
 }
+@media (min-width: 600px) {
+  body {
+    background-image: url("./trianglify-lowres.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+  }
+}
 
 /* Works on Firefox */
 * {
@@ -174,6 +181,8 @@ p {
 
 ul {
   list-style: none;
+  display: inline;
+  display: flex;
 }
 
 a {
@@ -306,8 +315,8 @@ img {
   display: block;
   height: 32px;
   width: 32px;
-  top: 20px;
-  left: 20px;
+  top: 5px;
+  left: 15px;
   z-index: 10;
   opacity: 0;
   cursor: pointer;
@@ -443,9 +452,16 @@ img {
   height: 100vh;
   position: relative;
   overflow-x: clip;
-  background: radial-gradient(#3a3d40, #181719);
+  background-image: url("./trianglify-lowres.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-top: -20px;
   scroll-margin-top: 50px;
+}
+@media (min-width: 600px) {
+  #welcome-section {
+    background: none;
+  }
 }
 
 .welcome-container {
@@ -523,26 +539,13 @@ img {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background: #181719;
+  background: linear-gradient(to top, #181719, rgba(24, 23, 25, 0));
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 5;
   scroll-margin-top: 50px;
-  margin-bottom: 8vw;
 }
-@media (min-width: 600px) {
-  .about-me {
-    margin-bottom: 10px;
-    margin-top: 15px;
-  }
-}
-@media (min-width: 2000px) {
-  .about-me {
-    margin-bottom: 50px;
-  }
-}
-
 .about-me-text {
   display: inline-block;
   width: 70vw;
@@ -617,14 +620,18 @@ hr.dashed {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   width: 80vw;
-  height: 25vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 50px;
 }
 @media (min-width: 600px) {
   .projects-section-container {
     margin-top: 50px;
     height: 30vw;
+    flex-direction: row;
   }
 }
 
@@ -633,9 +640,10 @@ hr.dashed {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 35vw;
-  height: 40vw;
+  width: 60vw;
+  height: 60vw;
   border: 5px solid #faebd7;
+  margin: 20px;
 }
 @media (min-width: 600px) {
   .project {
@@ -659,9 +667,10 @@ hr.dashed {
 }
 
 .preview-text p {
-  color: #dc143c;
+  color: #faebd7;
   margin: 1vw;
   font-size: 4vw;
+  margin-top: 20px;
 }
 @media (min-width: 600px) {
   .preview-text p {
@@ -691,7 +700,6 @@ hr.dashed {
 }
 @media (min-width: 1400px) {
   .contact-section {
-    margin-bottom: 100px;
     height: 600px;
   }
 }

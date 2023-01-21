@@ -11,10 +11,8 @@ function App() {
   return (
     <>
       <Favicon url="https://i.imgur.com/QrUsLs3.png"></Favicon>
-      <div className="background"></div>
-      <div className="background-static"></div>
-      <div className="background-static2"></div>
-      <div className="container">
+
+      <main className="container">
         {/* || Navbar */}
         <nav>
           <div className="nav-box"></div>
@@ -27,26 +25,28 @@ function App() {
                 <span className="line line3"></span>
               </div>
               <div className="menu-items">
-                <li>
-                  <a className="home" href="#welcome-section">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a className="about" href="#about-me">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a className="portfolio" href="#portfolio">
-                    Portfolio
-                  </a>
-                </li>
-                <li>
-                  <a className="contact" href="#contact">
-                    Contact
-                  </a>
-                </li>
+                <ul>
+                  <li>
+                    <a className="home" href="#welcome-section">
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a className="about" href="#about-me">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a className="portfolio" href="#portfolio">
+                      Portfolio
+                    </a>
+                  </li>
+                  <li>
+                    <a className="contact" href="#contact">
+                      Contact
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -180,7 +180,7 @@ function App() {
             </a>
           </div>
         </section>
-      </div>
+      </main>
     </>
   );
 }

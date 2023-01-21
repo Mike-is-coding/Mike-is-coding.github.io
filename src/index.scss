@@ -203,6 +203,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   background: $black;
+  @media (min-width: 600px){
+    background-image: url("./trianglify-lowres.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+  }
 }
 
 /* Works on Firefox */
@@ -276,6 +281,8 @@ p {
 
 ul {
   list-style: none;
+  display: inline;
+  display: flex;
 }
 
 a {
@@ -399,8 +406,8 @@ img {
   display: block;
   height: 32px;
   width: 32px;
-  top: 20px;
-  left: 20px;
+  top: 5px;
+  left: 15px;
   z-index: 10;
   opacity: 0;
   cursor: pointer;
@@ -422,6 +429,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  // background: green;
   @media (min-width: 2000px) {
     top: 18px;
     width: 40px;
@@ -525,9 +533,14 @@ img {
   height: 100vh;
   position: relative;
   overflow-x: clip;
-  background: radial-gradient(#3a3d40, #181719);
+  background-image: url("./trianglify-lowres.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-top: -20px;
   scroll-margin-top: 50px;
+  @media (min-width: 600px) {
+    background: none;
+  }
 }
 
 .welcome-container {
@@ -598,19 +611,18 @@ img {
   top: 0;
   width: 100%;
   height: fit-content;
-  background: $black;
+  background: linear-gradient(to top, $black, rgb(24, 23, 25, 0));
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 5;
   scroll-margin-top: 50px;
-  margin-bottom: 8vw;
   @media (min-width: 600px) {
-    margin-bottom: 10px;
-    margin-top: 15px;
+    // margin-bottom: 10px;
+    // margin-top: 15px;
   }
   @media (min-width: 2000px) {
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
   }
 }
 
@@ -681,13 +693,15 @@ hr.dashed {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   width: 80vw;
-  height: 25vw;
+  height: fit-content;
   margin: 50px;
   //Media Queries
   @media (min-width: 600px) {
     margin-top: 50px;
     height: 30vw;
+    flex-direction: row;
   }
 }
 
@@ -696,9 +710,10 @@ hr.dashed {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 35vw;
-  height: 40vw;
+  width: 60vw;
+  height: 60vw;
   border: 5px solid $white;
+  margin: 20px;
   //Media Queries
   @media (min-width: 600px) {
     width: 40%;
@@ -720,9 +735,10 @@ hr.dashed {
 }
 
 .preview-text p {
-  color:$red;
+  color: $white;
   margin: 1vw;
   font-size: 4vw;
+  margin-top: 20px;
   //Media Queries
   @media (min-width: 600px) {
     font-size: 1.5rem;
@@ -750,7 +766,7 @@ hr.dashed {
   //Media Queries
   @media (min-width: 1400px) {
     // margin-top: 100px;
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
     height: 600px;
   }
 }
