@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.4e75896c.css",
-    "main.js": "/static/js/main.7018015f.js",
+    "main.css": "/static/css/main.38344a13.css",
+    "main.js": "/static/js/main.b69e03e0.js",
     "static/js/787.583385f9.chunk.js": "/static/js/787.583385f9.chunk.js",
-    "static/media/Pomodoro Clock.png": "/static/media/Pomodoro Clock.e696763956035f5ae46b.png",
-    "static/media/trianglify-lowres.png": "/static/media/trianglify-lowres.5379ea018cbfe9f0a3b8.png",
-    "static/media/JavascriptCalc.png": "/static/media/JavascriptCalc.d3b529a83af2df16f48c.png",
+    "static/media/Pomodoro Clock.webp": "/static/media/Pomodoro Clock.b5afe47384e9a040a3cb.webp",
+    "static/media/Geometric Background.webp": "/static/media/Geometric Background.674846c6444e9d913cee.webp",
+    "static/media/JavascriptCalc.webp": "/static/media/JavascriptCalc.f36c50865451cc9f761c.webp",
     "index.html": "/index.html",
-    "main.4e75896c.css.map": "/static/css/main.4e75896c.css.map",
-    "main.7018015f.js.map": "/static/js/main.7018015f.js.map",
+    "main.38344a13.css.map": "/static/css/main.38344a13.css.map",
+    "main.b69e03e0.js.map": "/static/js/main.b69e03e0.js.map",
     "787.583385f9.chunk.js.map": "/static/js/787.583385f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4e75896c.css",
-    "static/js/main.7018015f.js"
+    "static/css/main.38344a13.css",
+    "static/js/main.b69e03e0.js"
   ]
 }
