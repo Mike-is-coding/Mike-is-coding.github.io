@@ -203,11 +203,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   background: $black;
-  @media (min-width: 600px){
-    background-image: url("./trianglify-lowres.png");
-    background-repeat: repeat-y;
-    background-size: cover;
-  }
+  // @media (min-width: 600px){
+  //   background-image: url("./Geometric Background.webp");
+  //   background-repeat: repeat-y;
+  //   background-size: cover;
+  // }
 }
 
 /* Works on Firefox */
@@ -533,14 +533,14 @@ img {
   height: 100vh;
   position: relative;
   overflow-x: clip;
-  background-image: url("./trianglify-lowres.png");
+  background-image: url("./Geometric Background.webp");
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -20px;
   scroll-margin-top: 50px;
-  @media (min-width: 600px) {
-    background: none;
-  }
+  // @media (min-width: 600px) {
+  //   background: none;
+  // }
 }
 
 .welcome-container {
@@ -611,7 +611,8 @@ img {
   top: 0;
   width: 100%;
   height: fit-content;
-  background: linear-gradient(to top, $black, rgb(24, 23, 25, 0));
+  background: linear-gradient(to top, $black, black);
+  // background: $black;
   display: flex;
   justify-content: center;
   align-items: center;

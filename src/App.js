@@ -1,8 +1,8 @@
 import "./App.css";
 import "./index.css";
 import Favicon from "react-favicon";
-import logo from "./JavascriptCalc.png";
-import pomodoroClock from "./Pomodoro Clock.png";
+import jsCalc from "./JavascriptCalc.webp";
+import pomodoroClock from "./Pomodoro Clock.webp";
 
 // const divHeight = document.getElementsByClassName("container").clientHeight;
 // document.getElementsByClassName("background").style.height = divHeight+"px";
@@ -101,7 +101,7 @@ function App() {
                   <img
                     className="hover"
                     id="jscalc"
-                    src={logo}
+                    src={jsCalc}
                     alt="Javascript Calculator"
                   />
                 </a>
