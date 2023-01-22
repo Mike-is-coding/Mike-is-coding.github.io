@@ -18,7 +18,7 @@ function App() {
           <div className="nav-box"></div>
           <div className="navbar">
             <div className="navbar-container nav-container">
-              <input className="checkbox" type="checkbox" name="" id="" />
+              <input className="checkbox" type="checkbox" name="" id="" label="Hamburger Menu" />
               <div className="hamburger-lines" alt="Menu" title="Menu">
                 <span className="line line1"></span>
                 <span className="line line2"></span>
