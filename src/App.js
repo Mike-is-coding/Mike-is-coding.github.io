@@ -1,8 +1,9 @@
 import "./App.css";
 import "./index.css";
 import Favicon from "react-favicon";
-import jsCalc from "./JavascriptCalc.webp";
+import logo from "./JavascriptCalc.webp";
 import pomodoroClock from "./Pomodoro Clock.webp";
+import dictionApp from "./DictionApp.webp"
 
 // const divHeight = document.getElementsByClassName("container").clientHeight;
 // document.getElementsByClassName("background").style.height = divHeight+"px";
@@ -11,42 +12,42 @@ function App() {
   return (
     <>
       <Favicon url="https://i.imgur.com/QrUsLs3.png"></Favicon>
-
-      <main className="container">
+      <div className="background"></div>
+      <div className="background-static"></div>
+      <div className="background-static2"></div>
+      <div className="container">
         {/* || Navbar */}
         <nav>
           <div className="nav-box"></div>
           <div className="navbar">
             <div className="navbar-container nav-container">
-              <input className="checkbox" type="checkbox" name="" id="" label="Hamburger Menu" />
+              <input className="checkbox" type="checkbox" name="" id="" />
               <div className="hamburger-lines" alt="Menu" title="Menu">
                 <span className="line line1"></span>
                 <span className="line line2"></span>
                 <span className="line line3"></span>
               </div>
               <div className="menu-items">
-                <ul>
-                  <li>
-                    <a className="home" href="#welcome-section">
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a className="about" href="#about-me">
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a className="portfolio" href="#portfolio">
-                      Portfolio
-                    </a>
-                  </li>
-                  <li>
-                    <a className="contact" href="#contact">
-                      Contact
-                    </a>
-                  </li>
-                </ul>
+                <li>
+                  <a className="home" href="#welcome-section">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a className="about" href="#about-me">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a className="portfolio" href="#portfolio">
+                    Portfolio
+                  </a>
+                </li>
+                <li>
+                  <a className="contact" href="#contact">
+                    Contact
+                  </a>
+                </li>
               </div>
             </div>
           </div>
@@ -80,7 +81,7 @@ function App() {
               <hr className="dashed" />
               <p>
                 {
-                  "I am a Front-End Developer with a passion for creating visually appealing and user-friendly websites and web applications. I have a solid understanding of HTML, CSS, JavaScript, and jQuery and am familiar with responsive design and popular front-end frameworks such as Reactjs. I have also worked with some Python and Bootstrap in the past. I am a quick learner and am always eager to expand my skills and knowledge in the field. I am eager to learn and improve my skills, and dedicated to providing the best user experience."
+                  "I am an entry-level front-end developer with a passion for creating visually appealing and user-friendly websites and web applications. I have a solid understanding of HTML, CSS, JavaScript, and jQuery and am familiar with responsive design and popular front-end frameworks such as Reactjs. I have also worked with some Python and Bootstrap in the past. I am a quick learner and am always eager to expand my skills and knowledge in the field. I am eager to learn and improve my skills, and dedicated to providing the best user experience."
                 }
               </p>
             </div>
@@ -101,7 +102,7 @@ function App() {
                   <img
                     className="hover"
                     id="jscalc"
-                    src={jsCalc}
+                    src={logo}
                     alt="Javascript Calculator"
                   />
                 </a>
@@ -112,6 +113,29 @@ function App() {
                 </p>
               </div>
             </div>
+            <div className="project">
+              <div className="preview">
+                <a
+                  href="https://dictionary-web-app-thnd.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    className="hover"
+                    id="DictionaryApp"
+                    src={dictionApp}
+                    alt="Dictionary Web App"
+                  />
+                </a>
+              </div>
+              <div className="preview-text">
+                <p>
+                  <span>Dictionary App</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="projects-section-container">
             <div className="project">
               <div className="preview">
                 <a
@@ -180,7 +204,7 @@ function App() {
             </a>
           </div>
         </section>
-      </main>
+      </div>
     </>
   );
 }
